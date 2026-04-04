@@ -1,0 +1,87 @@
+--// SETTINGS
+local CorrectKey = "ENH2026"
+
+--// UI
+local ScreenGui = Instance.new("ScreenGui", game.CoreGui)
+
+local Main = Instance.new("Frame", ScreenGui)
+Main.Size = UDim2.new(0, 600, 0, 300)
+Main.Position = UDim2.new(0.5, -300, 0.5, -150)
+Main.BackgroundColor3 = Color3.fromRGB(20, 0, 0)
+Main.Active = true
+Main.Draggable = true
+
+Instance.new("UICorner", Main).CornerRadius = UDim.new(0, 15)
+
+-- Title
+local Title = Instance.new("TextLabel", Main)
+Title.Size = UDim2.new(1, 0, 0, 40)
+Title.Text = "🔥 Encrypted HUB - KEY SYSTEM 🔑"
+Title.BackgroundTransparency = 1
+Title.TextColor3 = Color3.fromRGB(255, 80, 80)
+Title.Font = Enum.Font.GothamBold
+Title.TextSize = 20
+
+-- Key Input
+local KeyBox = Instance.new("TextBox", Main)
+KeyBox.Size = UDim2.new(0.8, 0, 0, 50)
+KeyBox.Position = UDim2.new(0.1, 0, 0.3, 0)
+KeyBox.PlaceholderText = "🔒 Enter your key here..."
+KeyBox.BackgroundColor3 = Color3.fromRGB(60, 0, 0)
+KeyBox.TextColor3 = Color3.new(1,1,1)
+KeyBox.Font = Enum.Font.Gotham
+KeyBox.TextSize = 16
+
+Instance.new("UICorner", KeyBox).CornerRadius = UDim.new(0, 10)
+
+-- Verify Button
+local Verify = Instance.new("TextButton", Main)
+Verify.Size = UDim2.new(0.8, 0, 0, 50)
+Verify.Position = UDim2.new(0.1, 0, 0.55, 0)
+Verify.Text = "🚀 VERIFY KEY 🚀"
+Verify.BackgroundColor3 = Color3.fromRGB(200, 0, 0)
+Verify.TextColor3 = Color3.new(1,1,1)
+Verify.Font = Enum.Font.GothamBold
+Verify.TextSize = 18
+
+Instance.new("UICorner", Verify).CornerRadius = UDim.new(0, 10)
+
+-- Status
+local Status = Instance.new("TextLabel", Main)
+Status.Size = UDim2.new(1, 0, 0, 30)
+Status.Position = UDim2.new(0, 0, 0.8, 0)
+Status.BackgroundTransparency = 1
+Status.Text = ""
+Status.Font = Enum.Font.Gotham
+Status.TextSize = 16
+
+-- Close Button
+local Close = Instance.new("TextButton", Main)
+Close.Size = UDim2.new(0, 30, 0, 30)
+Close.Position = UDim2.new(1, -35, 0, 5)
+Close.Text = "X"
+Close.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Close.TextColor3 = Color3.new(1,1,1)
+
+Close.MouseButton1Click:Connect(function()
+    ScreenGui:Destroy()
+end)
+
+-- Verify Logic
+Verify.MouseButton1Click:Connect(function()
+    if KeyBox.Text == CorrectKey then
+        Status.Text = "✅ Key Correct! Loading..."
+        Status.TextColor3 = Color3.fromRGB(0,255,0)
+
+        wait(1)
+
+        ScreenGui:Destroy()
+
+        -- 🔥 LOAD LUNA HUB V3
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/EpicDeevvXDarkness/UnoXLuna/refs/heads/main/LUNA%20HUB%20v3"))()
+
+    else
+        Status.Text = "❌ Invalid Key!"
+        Status.TextColor3 = Color3.fromRGB(255,0,0)
+    end
+end)
