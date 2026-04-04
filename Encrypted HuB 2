@@ -1,7 +1,7 @@
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/556ii/zzzzzzizzzzzz/refs/heads/main/iiiiii19", true))()
 
 local window = library:AddWindow("EncryptedHub | Public", {
-    main_color = Color3.fromRGB(0, 0, 139),
+    main_color = Color3.fromRGB(160, 32, 240)),
     min_size = Vector2.new(700, 700),
     can_resize = true,
 })
@@ -1991,9 +1991,9 @@ end)
 
 local credits = window:AddTab("Credits")
 
-credits:AddLabel("Script By Myers")
+credits:AddLabel("Script By UnoXDarkness")
 
-credits:AddLabel("Discord: imperialistaa")
+credits:AddLabel("Discord: ")
 
-credits:AddLabel("Sync X V1 Free Version")
+credits:AddLabel("Encrypted V1 Free Version")
 
