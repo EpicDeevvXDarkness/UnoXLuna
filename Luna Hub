@@ -1,0 +1,132 @@
+local TweenService = game:GetService("TweenService")
+local Players = game:GetService("Players")
+
+local player = Players.LocalPlayer
+
+local CORRECT_KEY = "Uno X Luna"
+local GET_KEY_LINK = "put ut linl here nigga"
+
+local Gui = Instance.new("ScreenGui", game.CoreGui)
+Gui.Name = "LUNA_KEY"
+Gui.ResetOnSpawn = false
+
+local Main = Instance.new("Frame", Gui)
+Main.Size = UDim2.new(0,400,0,260)
+Main.Position = UDim2.new(0.5,-200,-1,0)
+Main.BackgroundColor3 = Color3.fromRGB(10,10,10)
+Main.BorderSizePixel = 0
+Main.Active = true
+Main.Draggable = true
+Instance.new("UICorner", Main).CornerRadius = UDim.new(0,12)
+
+local Stroke = Instance.new("UIStroke", Main)
+Stroke.Color = Color3.fromRGB(0,255,255)
+Stroke.Thickness = 2
+
+TweenService:Create(Main,TweenInfo.new(0.5),{Position=UDim2.new(0.5,-200,0.5,-130)}):Play()
+
+local Title = Instance.new("TextLabel", Main)
+Title.Size = UDim2.new(1,0,0,50)
+Title.BackgroundTransparency = 1
+Title.Text = "LUNA HUB | KEY SYSTEM"
+Title.Font = Enum.Font.GothamBold
+Title.TextSize = 22
+Title.TextColor3 = Color3.fromRGB(0,255,255)
+
+local Owner = Instance.new("TextLabel", Main)
+Owner.Size = UDim2.new(1,0,0,30)
+Owner.Position = UDim2.new(0,0,0,45)
+Owner.BackgroundTransparency = 1
+Owner.Text = "Luna Hub Owner : Uno X Luna"
+Owner.Font = Enum.Font.Gotham
+Owner.TextSize = 14
+Owner.TextColor3 = Color3.fromRGB(200,200,200)
+
+local Close = Instance.new("TextButton", Main)
+Close.Size = UDim2.new(0,30,0,30)
+Close.Position = UDim2.new(1,-35,0,5)
+Close.Text = "X"
+Close.BackgroundColor3 = Color3.fromRGB(255,0,0)
+Close.TextColor3 = Color3.fromRGB(255,255,255)
+Instance.new("UICorner", Close)
+
+local Min = Instance.new("TextButton", Main)
+Min.Size = UDim2.new(0,30,0,30)
+Min.Position = UDim2.new(1,-70,0,5)
+Min.Text = "-"
+Min.BackgroundColor3 = Color3.fromRGB(255,200,0)
+Min.TextColor3 = Color3.fromRGB(0,0,0)
+Instance.new("UICorner", Min)
+
+local Box = Instance.new("TextBox", Main)
+Box.Size = UDim2.new(0.8,0,0,40)
+Box.Position = UDim2.new(0.1,0,0.4,0)
+Box.PlaceholderText = "Enter Key..."
+Box.Text = ""
+Box.BackgroundColor3 = Color3.fromRGB(20,20,20)
+Box.TextColor3 = Color3.fromRGB(255,255,255)
+Box.Font = Enum.Font.Gotham
+Box.TextSize = 16
+Instance.new("UICorner", Box)
+
+local Submit = Instance.new("TextButton", Main)
+Submit.Size = UDim2.new(0.8,0,0,40)
+Submit.Position = UDim2.new(0.1,0,0.6,0)
+Submit.Text = "Submit Key"
+Submit.BackgroundColor3 = Color3.fromRGB(0,170,255)
+Submit.TextColor3 = Color3.fromRGB(255,255,255)
+Submit.Font = Enum.Font.GothamBold
+Submit.TextSize = 16
+Instance.new("UICorner", Submit)
+
+local GetKey = Instance.new("TextButton", Main)
+GetKey.Size = UDim2.new(0.8,0,0,30)
+GetKey.Position = UDim2.new(0.1,0,0.78,0)
+GetKey.Text = "Get Key"
+GetKey.BackgroundTransparency = 1
+GetKey.TextColor3 = Color3.fromRGB(0,255,255)
+GetKey.Font = Enum.Font.Gotham
+GetKey.TextSize = 14
+
+local Icon = Instance.new("ImageButton", Gui)
+Icon.Size = UDim2.new(0,50,0,50)
+Icon.Position = UDim2.new(0,20,0.5,0)
+Icon.Image = "rbxassetid://70457731796900"
+Icon.BackgroundTransparency = 1
+Icon.Visible = false
+Icon.Active = true
+Icon.Draggable = true
+
+Submit.MouseButton1Click:Connect(function()
+	if Box.Text == CORRECT_KEY then
+		Submit.Text = "Correct Key ✔"
+		wait(0.5)
+		TweenService:Create(Main,TweenInfo.new(0.5),{Position=UDim2.new(0.5,-200,1,300)}):Play()
+		wait(0.5)
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/EpicDeevvXDarkness/UnoXLuna/refs/heads/main/Luna%20hub"))()
+	else
+		Submit.Text = "Wrong Key ❌"
+		wait(1)
+		Submit.Text = "Submit Key"
+	end
+end)
+
+GetKey.MouseButton1Click:Connect(function()
+	if setclipboard then
+		setclipboard(GET_KEY_LINK)
+	end
+end)
+
+Close.MouseButton1Click:Connect(function()
+	Gui:Destroy()
+end)
+
+Min.MouseButton1Click:Connect(function()
+	Main.Visible = false
+	Icon.Visible = true
+end)
+
+Icon.MouseButton1Click:Connect(function()
+	Main.Visible = true
+	Icon.Visible = false
+end)
