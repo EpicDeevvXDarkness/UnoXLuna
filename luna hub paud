@@ -1,0 +1,106 @@
+-- LUNA HUB Paid: Muscle Legends Script for Delta
+-- Version: 2.3.0 (Hide Frames Feature)
+
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/imhenne187/SilenceElerium/refs/heads/main/src/SilenceEleriumLibrary.luau", true))()
+
+local window = library:AddWindow("Aegis Hub | Muscle Legends", {
+    title_bar = {Color3.fromRGB(0, 150, 255), Color3.fromRGB(0, 100, 200), Color3.fromRGB(0, 50, 150)},
+    title_bar_transparency = 0.2,
+    background = {Color3.fromRGB(15, 15, 15), Color3.fromRGB(10, 10, 10), Color3.fromRGB(5, 5, 5)},
+    background_transparency = 0.1,
+    main_color = Color3.fromRGB(0, 150, 255),
+    min_size = Vector2.new(400, 400),
+    can_resize = false
+})
+
+local MainTab = window:AddTab("Main")
+MainTab:Show()
+
+local LocalPlayer = game:GetService("Players").LocalPlayer
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Stats = LocalPlayer:WaitForChild("leaderstats")
+
+-- Swift Samurai Auto-Equip
+local function EquipSwiftSamurai()
+    pcall(function()
+        for _, pet in pairs(LocalPlayer.petsFolder.Unique:GetChildren()) do
+            if pet.Name == "Swift Samurai" then
+                ReplicatedStorage.rEvents.equipPetEvent:FireServer("equipPet", pet)
+            end
+        end
+    end)
+end
+
+-- HYPER FAST STRENGTH
+MainTab:AddSwitch("Hyper Strength", function(state)
+    _G.HyperStrength = state
+    if state then
+        EquipSwiftSamurai()
+        task.spawn(function()
+            while _G.HyperStrength do
+                for i = 1, 22 do
+                    if not _G.HyperStrength then break end
+                    LocalPlayer.muscleEvent:FireServer("rep")
+                end
+                task.wait(0.001)
+            end
+        end)
+    end
+end)
+
+-- HYPER FAST REBIRTH
+MainTab:AddSwitch("Hyper Rebirth", function(state)
+    _G.HyperRebirth = state
+    task.spawn(function()
+        while _G.HyperRebirth do
+            task.wait(0.01)
+            pcall(function()
+                local strength = Stats:FindFirstChild("Strength")
+                local rebirths = Stats:FindFirstChild("Rebirths")
+                
+                if strength and rebirths then
+                    local req = 15000 * (rebirths.Value + 1)
+                    if strength.Value >= req then
+                        ReplicatedStorage.rEvents.rebirthEvent:FireServer("rebirthRequest")
+                    end
+                end
+            end)
+        end
+    end)
+end)
+
+-- HIDE FRAMES (GUI OPTIMIZATION)
+MainTab:AddSwitch("Hide Frames", function(state)
+    local PlayerGui = LocalPlayer:WaitForChild("PlayerGui")
+    local mainGui = PlayerGui:FindFirstChild("Main") or PlayerGui:FindFirstChild("HUD")
+    if mainGui then
+        for _, frame in pairs(mainGui:GetChildren()) do
+            if frame:IsA("Frame") or frame:IsA("ScrollingFrame") then
+                frame.Visible = not state
+            end
+        end
+    end
+    local viewport = PlayerGui:FindFirstChild("ScreenGui")
+    if viewport then
+        viewport.Enabled = not state
+    end
+end)
+
+local PlayerTab = window:AddTab("Player")
+
+PlayerTab:AddSwitch("Infinite Jump", function(state)
+    _G.InfJump = state
+    game:GetService("UserInputService").JumpRequest:Connect(function()
+        if _G.InfJump and LocalPlayer.Character then
+            local hum = LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
+            if hum then hum:ChangeState("Jumping") end
+        end
+    end)
+end)
+
+PlayerTab:AddTextBox("Speed", function(value)
+    local hum = LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("Humanoid")
+    if hum then hum.WalkSpeed = tonumber(value) or 16 end
+end)
+
+print("Luna Hub v2.3.0 Loaded!")
