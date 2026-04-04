@@ -31,7 +31,7 @@ Title.BackgroundTransparency = 1
 Title.Text = "Encrypted Hub | KEY SYSTEM"
 Title.Font = Enum.Font.GothamBold
 Title.TextSize = 22
-Title.TextColor3 = Color3.fromRGB(0,255,255)
+Title.TextColor3 = Color3.fromRGB(34, 139, 34)
 
 local Owner = Instance.new("TextLabel", Main)
 Owner.Size = UDim2.new(1,0,0,30)
