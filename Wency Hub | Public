@@ -1,0 +1,2249 @@
+local v1 = loadstring(game:HttpGet("https://raw.githubusercontent.com/memejames/elerium-v2-ui-library//main/Library", true))():AddWindow("WENCY HUB PUBLIC | MUSCLE LEGENDS", {
+    main_color = Color3.fromRGB(0, 128, 128),
+    min_size = Vector2.new(475, 382),
+    can_resize = false
+})
+local v2 = v1:AddTab("Home")
+v2:Show()
+v2:AddLabel("Credits to Ahmed for making the Wency Public script")
+v2:AddLabel("If you guys want anything added tell us on the discord")
+v2:AddLabel("Almost 800 members in the WencyHub Server on discord!!")
+v2:AddLabel("Enjoy using the script and have fun")
+v2:AddLabel("------------- Teleports -------------")
+local vu3 = nil
+local v5 = v2:AddDropdown("Location", function(p4)
+    vu3 = p4
+end)
+v5:Add("Spawn Island")
+v5:Add("Tiny Island")
+v5:Add("Frost Island")
+v5:Add("Mythical Island")
+v5:Add("Infernal Island")
+v5:Add("Legend Island")
+v5:Add("Muscle King")
+v5:Add("Ancient Jungle Island")
+v2:AddButton("Teleport", function()
+    if vu3 then
+        local v6 = {
+            ["Spawn Island"] = CFrame.new(- 5.7984161376953125, 5.190139293670654, - 195.59176635742188),
+            ["Tiny Island"] = CFrame.new(- 39.091819763183594, 5.9991278648376465, 1886.1307373046875),
+            ["Frost Island"] = CFrame.new(- 2623.022216796875, 5.84573221206665, - 409.0733337402344),
+            ["Mythical Island"] = CFrame.new(2250.778076171875, 5.844851970672607, 1073.2266845703125),
+            ["Infernal Island"] = CFrame.new(- 6758.9638671875, 5.845746040344238, - 1284.918701171875),
+            ["Legend Island"] = CFrame.new(4603.28173828125, 989.9984130859375, - 3897.86572265625),
+            ["Muscle King"] = CFrame.new(- 8625.9287109375, 15.695758819580078, - 5730.47216796875),
+            ["Ancient Jungle Island"] = CFrame.new(- 8642.2529296875, 6.275508880615234, 2380.506591796875)
+        }
+        local v7 = game.Players.LocalPlayer
+        local v8 = v7.Character or v7.CharacterAdded:Wait()
+        if v6[vu3] then
+            v8:SetPrimaryPartCFrame(v6[vu3])
+        end
+    end
+end)
+v2:AddLabel("------------- Other Stuff -------------")
+v2:AddButton("Anti AFK", function()
+    task.spawn(function()
+        local v9, v10 = pcall(function()
+            return game:HttpGet("https://raw.githubusercontent.com/hassanxzayn-lua/Anti-afk/main/antiafkbyhassanxzyn")
+        end)
+        local v11 = v9 and v10 and (v10 ~= "" and loadstring(v10))
+        if v11 then
+            pcall(v11)
+        end
+    end)
+end)
+v2:AddButton("Infinite Yield", function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-InfYeiod-reupload-27320"))()
+end)
+v2:AddButton("Free Auto Lift Gamepass", function()
+    local v12 = game:GetService("ReplicatedStorage").gamepassIds
+    local v13 = game:GetService("Players").LocalPlayer
+    local v14, v15, v16 = pairs(v12:GetChildren())
+    while true do
+        local v17
+        v16, v17 = v14(v15, v16)
+        if v16 == nil then
+            break
+        end
+        local v18 = Instance.new("IntValue")
+        v18.Name = v17.Name
+        v18.Value = v17.Value
+        v18.Parent = v13.ownedGamepasses
+    end
+end)
+v2:AddSwitch("Walk On Water", function()
+    local v19 = Instance.new("Part")
+    v19.Parent = Game.Workspace
+    v19.Anchored = true
+    v19.Position = Vector3.new(11, - 9, 78)
+    v19.Size = Vector3.new(10000, 0, 10000)
+    local v20 = Instance.new("Part")
+    v20.Parent = Game.Workspace
+    v20.Anchored = true
+    v20.Position = Vector3.new(- 110, - 9, - 999)
+    v20.Size = Vector3.new(10000, 0, 10000)
+    local v21 = Instance.new("Part")
+    v21.Parent = Game.Workspace
+    v21.Anchored = true
+    v21.Position = Vector3.new(- 110, - 9, 1999)
+    v21.Size = Vector3.new(10000, 0, 10000)
+    local v22 = Instance.new("Part")
+    v22.Parent = Game.Workspace
+    v22.Anchored = true
+    v22.Position = Vector3.new(- 110, - 9, - 1999)
+    v22.Size = Vector3.new(10000, 0, 10000)
+    local v23 = Instance.new("Part")
+    v23.Parent = Game.Workspace
+    v23.Anchored = true
+    v23.Position = Vector3.new(- 110, - 9, 2999)
+    v23.Size = Vector3.new(10000, 0, 10000)
+    local v24 = Instance.new("Part")
+    v24.Parent = Game.Workspace
+    v24.Anchored = true
+    v24.Position = Vector3.new(- 110, - 9, - 3999)
+    v24.Size = Vector3.new(10000, 0, 10000)
+    local v25 = Instance.new("Part")
+    v25.Parent = Game.Workspace
+    v25.Anchored = true
+    v25.Position = Vector3.new(- 110, - 9, 4999)
+    v25.Size = Vector3.new(10000, 0, 10000)
+    local v26 = Instance.new("Part")
+    v26.Parent = Game.Workspace
+    v26.Anchored = true
+    v26.Position = Vector3.new(- 110, - 9, - 5999)
+    v26.Size = Vector3.new(10000, 0, 10000)
+    local v27 = Instance.new("Part")
+    v27.Parent = Game.Workspace
+    v27.Anchored = true
+    v27.Position = Vector3.new(- 110, - 9, - 6999)
+    v27.Size = Vector3.new(10000, 0, 10000)
+    local v28 = Instance.new("Part")
+    v28.Parent = Game.Workspace
+    v28.Anchored = true
+    v28.Position = Vector3.new(- 110, - 9, - 7999)
+    v28.Size = Vector3.new(10000, 0, 10000)
+    local v29 = Instance.new("Part")
+    v29.Parent = Game.Workspace
+    v29.Anchored = true
+    v29.Position = Vector3.new(- 110, - 9, - 8999)
+    v29.Size = Vector3.new(10000, 0, 10000)
+    local v30 = Instance.new("Part")
+    v30.Parent = Game.Workspace
+    v30.Anchored = true
+    v30.Position = Vector3.new(- 110, - 9, - 9999)
+    v30.Size = Vector3.new(10000, 0, 10000)
+    local v31 = Instance.new("Part")
+    v31.Parent = Game.Workspace
+    v31.Anchored = true
+    v31.Position = Vector3.new(- 110, - 9, - 10999)
+    v31.Size = Vector3.new(10000, 0, 10000)
+    local v32 = Instance.new("Part")
+    v32.Parent = Game.Workspace
+    v32.Anchored = true
+    v32.Position = Vector3.new(- 110, - 9, - 11999)
+    v32.Size = Vector3.new(10000, 0, 10000)
+    local v33 = Instance.new("Part")
+    v33.Parent = Game.Workspace
+    v33.Anchored = true
+    v33.Position = Vector3.new(- 110, - 9, - 12999)
+    v33.Size = Vector3.new(10000, 0, 10000)
+    local v34 = Instance.new("Part")
+    v34.Parent = Game.Workspace
+    v34.Anchored = true
+    v34.Position = Vector3.new(- 110, - 9, - 13999)
+    v34.Size = Vector3.new(10000, 0, 10000)
+    local v35 = Instance.new("Part")
+    v35.Parent = Game.Workspace
+    v35.Anchored = true
+    v35.Position = Vector3.new(- 110, - 9, - 14999)
+    v35.Size = Vector3.new(10000, 0, 10000)
+    local v36 = Instance.new("Part")
+    v36.Parent = Game.Workspace
+    v36.Anchored = true
+    v36.Position = Vector3.new(- 110, - 9, - 15999)
+    v36.Size = Vector3.new(10000, 0, 10000)
+    local v37 = Instance.new("Part")
+    v37.Parent = Game.Workspace
+    v37.Anchored = true
+    v37.Position = Vector3.new(- 110, - 9, - 16999)
+    v37.Size = Vector3.new(10000, 0, 10000)
+    local v38 = Instance.new("Part")
+    v38.Parent = Game.Workspace
+    v38.Anchored = true
+    v38.Position = Vector3.new(- 110, - 9, - 17999)
+    v38.Size = Vector3.new(10000, 0, 10000)
+    local v39 = Instance.new("Part")
+    v39.Parent = Game.Workspace
+    v39.Anchored = true
+    v39.Position = Vector3.new(- 110, - 9, - 18999)
+    v39.Size = Vector3.new(10000, 0, 10000)
+    local v40 = Instance.new("Part")
+    v40.Parent = Game.Workspace
+    v40.Anchored = true
+    v40.Position = Vector3.new(- 110, - 9, - 19999)
+    v40.Size = Vector3.new(10000, 0, 10000)
+    local v41 = Instance.new("Part")
+    v41.Parent = Game.Workspace
+    v41.Anchored = true
+    v41.Position = Vector3.new(- 110, - 9, - 20999)
+    v41.Size = Vector3.new(10000, 0, 10000)
+    local v42 = Instance.new("Part")
+    v42.Parent = Game.Workspace
+    v42.Anchored = true
+    v42.Position = Vector3.new(- 110, - 9, - 21999)
+    v42.Size = Vector3.new(10000, 0, 10000)
+    local v43 = Instance.new("Part")
+    v43.Parent = Game.Workspace
+    v43.Anchored = true
+    v43.Position = Vector3.new(- 110, - 9, - 22999)
+    v43.Size = Vector3.new(10000, 0, 10000)
+    local v44 = Instance.new("Part")
+    v44.Parent = Game.Workspace
+    v44.Anchored = true
+    v44.Position = Vector3.new(- 110, - 9, - 23999)
+    v44.Size = Vector3.new(10000, 0, 10000)
+    local v45 = Instance.new("Part")
+    v45.Parent = Game.Workspace
+    v45.Anchored = true
+    v45.Position = Vector3.new(- 8922.482421875, - 9.848660469055176, - 6233.65380859375)
+    v45.Size = Vector3.new(20000, 0, 20000)
+    local v46 = Instance.new("Part")
+    v46.Parent = Game.Workspace
+    v46.Anchored = true
+    v46.Position = Vector3.new(- 1107.2977294921875, - 9.78486156463623, - 4127.03369140625)
+    v46.Size = Vector3.new(20000, 0, 20000)
+    local v47 = Instance.new("Part")
+    v47.Parent = Game.Workspace
+    v47.Anchored = true
+    v47.Position = Vector3.new(- 2054.99365234375, - 9.430279284715652, - 5135.06201171875)
+    v47.Size = Vector3.new(20000, 0, 20000)
+    local v48 = Instance.new("Part")
+    v48.Parent = Game.Workspace
+    v48.Anchored = true
+    v48.Position = Vector3.new(- 3072.01806640625, - 9.645418643951416, - 6136.02392578125)
+    v48.Size = Vector3.new(20000, 0, 20000)
+    local v49 = Instance.new("Part")
+    v49.Parent = Game.Workspace
+    v49.Anchored = true
+    v49.Position = Vector3.new(- 4088.711181640625, - 9.43027925491333, - 5125.28076171875)
+    v49.Size = Vector3.new(20000, 0, 20000)
+    local v50 = Instance.new("Part")
+    v50.Parent = Game.Workspace
+    v50.Anchored = true
+    v50.Position = Vector3.new(- 5100.0576171875, - 9.215141296386719, - 5128.03369140625)
+    v50.Size = Vector3.new(20000, 0, 20000)
+    local v51 = Instance.new("Part")
+    v51.Parent = Game.Workspace
+    v51.Anchored = true
+    v51.Position = Vector3.new(- 6103.42626953125, - 9.000000953674316, - 5590.5859375)
+    v51.Size = Vector3.new(20000, 0, 20000)
+    local v52 = Instance.new("Part")
+    v52.Parent = Game.Workspace
+    v52.Anchored = true
+    v52.Position = Vector3.new(- 7096.3935546875, - 9.784859657287598, - 6403.66015625)
+    v52.Size = Vector3.new(20000, 0, 20000)
+    local v53 = Instance.new("Part")
+    v53.Parent = Game.Workspace
+    v53.Anchored = true
+    v53.Position = Vector3.new(- 9882.7021484375, - 9.633520126342773, - 5228.537109375)
+    v53.Size = Vector3.new(20000, 0, 20000)
+    local v54 = Instance.new("Part")
+    v54.Parent = Game.Workspace
+    v54.Anchored = true
+    v54.Position = Vector3.new(- 8889.23046875, - 9.418381690979004, - 4767.06689453125)
+    v54.Size = Vector3.new(20000, 0, 20000)
+    local v55 = Instance.new("Part")
+    v55.Parent = Game.Workspace
+    v55.Anchored = true
+    v55.Position = Vector3.new(- 7888.4443359375, - 9.203240394592285, - 4648.048828125)
+    v55.Size = Vector3.new(20000, 0, 20000)
+    local v56 = Instance.new("Part")
+    v56.Parent = Game.Workspace
+    v56.Anchored = true
+    v56.Position = Vector3.new(- 6868.951171875, - 9.9881010055542, - 4124.4384765625)
+    v56.Size = Vector3.new(20000, 0, 20000)
+    local v57 = Instance.new("Part")
+    v57.Parent = Game.Workspace
+    v57.Anchored = true
+    v57.Position = Vector3.new(- 5883.841796875, - 9.772962093353271, - 4073.54736328125)
+    v57.Size = Vector3.new(20000, 0, 20000)
+    local v58 = Instance.new("Part")
+    v58.Parent = Game.Workspace
+    v58.Anchored = true
+    v58.Position = Vector3.new(- 9873.0966796875, - 9.26787185668945, - 6775.55859375)
+    v58.Size = Vector3.new(20000, 0, 20000)
+    local v59 = Instance.new("Part")
+    v59.Parent = Game.Workspace
+    v59.Anchored = true
+    v59.Position = Vector3.new(- 8453.767578125, - 9.26786804199219, - 7212.89013671875)
+    v59.Size = Vector3.new(20000, 0, 20000)
+    local v60 = Instance.new("Part")
+    v60.Parent = Game.Workspace
+    v60.Anchored = true
+    v60.Position = Vector3.new(- 7482.234375, - 9.84866714477539, - 8082.72021484375)
+    v60.Size = Vector3.new(20000, 0, 20000)
+    local v61 = Instance.new("Part")
+    v61.Parent = Game.Workspace
+    v61.Anchored = true
+    v61.Position = Vector3.new(- 6483.5791015625, - 9.26786422729492, - 9055.9033203125)
+    v61.Size = Vector3.new(20000, 0, 20000)
+    local v62 = Instance.new("Part")
+    v62.Parent = Game.Workspace
+    v62.Anchored = true
+    v62.Position = Vector3.new(- 6561.2578125, - 9.84867858886719, - 10038.5146484375)
+    v62.Size = Vector3.new(20000, 0, 20000)
+    local v63 = Instance.new("Part")
+    v63.Parent = Game.Workspace
+    v63.Anchored = true
+    v63.Position = Vector3.new(1009.69091796875, - 9.11653518676758, 1046.963134765625)
+    v63.Size = Vector3.new(20000, 0, 20000)
+    local v64 = Instance.new("Part")
+    v64.Parent = Game.Workspace
+    v64.Anchored = true
+    v64.Position = Vector3.new(2178.023681640625, - 9.09156036376953, 287.1599426269531)
+    v64.Size = Vector3.new(20000, 0, 20000)
+    local v65 = Instance.new("Part")
+    v65.Parent = Game.Workspace
+    v65.Anchored = true
+    v65.Position = Vector3.new(1023.4569091796875, - 9.784860134124756, - 478.5546569824219)
+    v65.Size = Vector3.new(20000, 0, 20000)
+    local v66 = Instance.new("Part")
+    v66.Parent = Game.Workspace
+    v66.Anchored = true
+    v66.Position = Vector3.new(1416.96533203125, - 9.901395559310913, 2066.506591796875)
+    v66.Size = Vector3.new(20000, 0, 20000)
+    local v67 = Instance.new("Part")
+    v67.Parent = Game.Workspace
+    v67.Anchored = true
+    v67.Position = Vector3.new(1514.3587646484375, - 9.686256408691406, 3077.935791015625)
+    v67.Size = Vector3.new(20000, 0, 20000)
+    local v68 = Instance.new("Part")
+    v68.Parent = Game.Workspace
+    v68.Anchored = true
+    v68.Position = Vector3.new(1624.8602294921875, - 9.47111701965332, 4074.02587890625)
+    v68.Size = Vector3.new(20000, 0, 20000)
+    local v69 = Instance.new("Part")
+    v69.Parent = Game.Workspace
+    v69.Anchored = true
+    v69.Position = Vector3.new(1687.230712890625, - 9.255976676940918, 5069.81640625)
+    v69.Size = Vector3.new(20000, 0, 20000)
+    local v70 = Instance.new("Part")
+    v70.Parent = Game.Workspace
+    v70.Anchored = true
+    v70.Position = Vector3.new(1655.4146728515625, - 9.040838241577148, 6056.37451171875)
+    v70.Size = Vector3.new(20000, 0, 20000)
+    local v71 = Instance.new("Part")
+    v71.Parent = Game.Workspace
+    v71.Anchored = true
+    v71.Position = Vector3.new(650.4426879882812, - 9.825699090957642, 6532.1982421875)
+    v71.Size = Vector3.new(20000, 0, 20000)
+    local v72 = Instance.new("Part")
+    v72.Parent = Game.Workspace
+    v72.Anchored = true
+    v72.Position = Vector3.new(- 347.35028076171875, - 9.61055850982666, 6912.1591796875)
+    v72.Size = Vector3.new(20000, 0, 20000)
+    local v73 = Instance.new("Part")
+    v73.Parent = Game.Workspace
+    v73.Anchored = true
+    v73.Position = Vector3.new(218.79769897460938, - 9.39542007446289, 7934.68017578125)
+    v73.Size = Vector3.new(20000, 0, 20000)
+    local v74 = Instance.new("Part")
+    v74.Parent = Game.Workspace
+    v74.Anchored = true
+    v74.Position = Vector3.new(251.1740264892578, - 9.180282592773438, 8951.5595703125)
+    v74.Size = Vector3.new(20000, 0, 20000)
+    local v75 = Instance.new("Part")
+    v75.Parent = Game.Workspace
+    v75.Anchored = true
+    v75.Position = Vector3.new(360.1578369140625, - 9.965142488479614, 9967.0107421875)
+    v75.Size = Vector3.new(20000, 0, 20000)
+    local v76 = Instance.new("Part")
+    v76.Parent = Game.Workspace
+    v76.Anchored = true
+    v76.Position = Vector3.new(488.1932067871094, - 9.750001907348633, 10972.189453125)
+    v76.Size = Vector3.new(20000, 0, 20000)
+    local v77 = Instance.new("Part")
+    v77.Parent = Game.Workspace
+    v77.Anchored = true
+    v77.Position = Vector3.new(569.8875732421875, - 9.53486156463623, 11982.7353515625)
+    v77.Size = Vector3.new(20000, 0, 20000)
+    local v78 = Instance.new("Part")
+    v78.Parent = Game.Workspace
+    v78.Anchored = true
+    v78.Position = Vector3.new(629.5374755859375, - 9.319723129272461, 12985.849609375)
+    v78.Size = Vector3.new(20000, 0, 20000)
+    local v79 = Instance.new("Part")
+    v79.Parent = Game.Workspace
+    v79.Anchored = true
+    v79.Position = Vector3.new(1664.9771728515625, - 9.610558986663818, 7491.61181640625)
+    v79.Size = Vector3.new(20000, 0, 20000)
+    local v80 = Instance.new("Part")
+    v80.Parent = Game.Workspace
+    v80.Anchored = true
+    v80.Position = Vector3.new(1945.2432861328125, - 9.395420551300049, 8507.6533203125)
+    v80.Size = Vector3.new(20000, 0, 20000)
+    local v81 = Instance.new("Part")
+    v81.Parent = Game.Workspace
+    v81.Anchored = true
+    v81.Position = Vector3.new(904.4902954101562, - 9.784861087799072, - 2151.783447265625)
+    v81.Size = Vector3.new(20000, 0, 20000)
+    local v82 = Instance.new("Part")
+    v82.Parent = Game.Workspace
+    v82.Anchored = true
+    v82.Position = Vector3.new(1890.2633056640625, - 9.569720268249512, - 2413.07421875)
+    v82.Size = Vector3.new(20000, 0, 20000)
+    local v83 = Instance.new("Part")
+    v83.Parent = Game.Workspace
+    v83.Anchored = true
+    v83.Position = Vector3.new(2895.560302734375, - 9.354581356048584, - 2546.12109375)
+    v83.Size = Vector3.new(20000, 0, 20000)
+    local v84 = Instance.new("Part")
+    v84.Parent = Game.Workspace
+    v84.Anchored = true
+    v84.Position = Vector3.new(3881.858642578125, - 9.139442920684814, - 2962.385986328125)
+    v84.Size = Vector3.new(20000, 0, 20000)
+    local v85 = Instance.new("Part")
+    v85.Parent = Game.Workspace
+    v85.Anchored = true
+    v85.Position = Vector3.new(4874.54833984375, - 9.924301624298096, - 3218.8798828125)
+    v85.Size = Vector3.new(20000, 0, 20000)
+    local v86 = Instance.new("Part")
+    v86.Parent = Game.Workspace
+    v86.Anchored = true
+    v86.Position = Vector3.new(5892.513671875, - 9.709161758422852, - 3338.171875)
+    v86.Size = Vector3.new(20000, 0, 20000)
+    local v87 = Instance.new("Part")
+    v87.Parent = Game.Workspace
+    v87.Anchored = true
+    v87.Position = Vector3.new(6886.39990234375, - 9.505979061126709, - 3488.1533203125)
+    v87.Size = Vector3.new(20000, 0, 20000)
+    local v88 = Instance.new("Part")
+    v88.Parent = Game.Workspace
+    v88.Anchored = true
+    v88.Position = Vector3.new(7863.33056640625, - 9.290840148925781, - 3597.61279296875)
+    v88.Size = Vector3.new(20000, 0, 20000)
+    local v89 = Instance.new("Part")
+    v89.Parent = Game.Workspace
+    v89.Anchored = true
+    v89.Position = Vector3.new(8840.2548828125, - 9.075700759887695, - 3711.208740234375)
+    v89.Size = Vector3.new(20000, 0, 20000)
+    local v90 = Instance.new("Part")
+    v90.Parent = Game.Workspace
+    v90.Anchored = true
+    v90.Position = Vector3.new(9838.98046875, - 9.860561609268188, - 3811.1064453125)
+    v90.Size = Vector3.new(20000, 0, 20000)
+    local v91 = Instance.new("Part")
+    v91.Parent = Game.Workspace
+    v91.Anchored = true
+    v91.Position = Vector3.new(10812.9287109375, - 9.645423412322998, - 3987.937744140625)
+    v91.Size = Vector3.new(20000, 0, 20000)
+    local v92 = Instance.new("Part")
+    v92.Parent = Game.Workspace
+    v92.Anchored = true
+    v92.Position = Vector3.new(11798.421875, - 9.430284976959229, - 4059.906494140625)
+    v92.Size = Vector3.new(20000, 0, 20000)
+    local v93 = Instance.new("Part")
+    v93.Parent = Game.Workspace
+    v93.Anchored = true
+    v93.Position = Vector3.new(12794.8408203125, - 9.215145587921143, - 4103.353515625)
+    v93.Size = Vector3.new(20000, 0, 20000)
+    local v94 = Instance.new("Part")
+    v94.Parent = Game.Workspace
+    v94.Anchored = true
+    v94.Position = Vector3.new(13782.353515625, - 9.000005722045898, - 4253.642578125)
+    v94.Size = Vector3.new(20000, 0, 20000)
+    local v95 = Instance.new("Part")
+    v95.Parent = Game.Workspace
+    v95.Anchored = true
+    v95.Position = Vector3.new(14800.7666015625, - 9.784866333007812, - 4368.7177734375)
+    v95.Size = Vector3.new(20000, 0, 20000)
+    local v96 = Instance.new("Part")
+    v96.Parent = Game.Workspace
+    v96.Anchored = true
+    v96.Position = Vector3.new(15813.6171875, - 9.569726467132568, - 4453.31591796875)
+    v96.Size = Vector3.new(20000, 0, 20000)
+    local v97 = Instance.new("Part")
+    v97.Parent = Game.Workspace
+    v97.Anchored = true
+    v97.Position = Vector3.new(16818.390625, - 9.354587078094482, - 4569.81396484375)
+    v97.Size = Vector3.new(20000, 0, 20000)
+    local v98 = Instance.new("Part")
+    v98.Parent = Game.Workspace
+    v98.Anchored = true
+    v98.Position = Vector3.new(17821.248046875, - 9.139448642730713, - 4737.97509765625)
+    v98.Size = Vector3.new(20000, 0, 20000)
+    local v99 = Instance.new("Part")
+    v99.Parent = Game.Workspace
+    v99.Anchored = true
+    v99.Position = Vector3.new(18001.896484375, - 9.924308776855469, - 3764.74609375)
+    v99.Size = Vector3.new(20000, 0, 20000)
+    local v100 = Instance.new("Part")
+    v100.Parent = Game.Workspace
+    v100.Anchored = true
+    v100.Position = Vector3.new(17008.357421875, - 9.7091703414917, - 2794.70751953125)
+    v100.Size = Vector3.new(20000, 0, 20000)
+    local v101 = Instance.new("Part")
+    v101.Parent = Game.Workspace
+    v101.Anchored = true
+    v101.Position = Vector3.new(16014.57421875, - 9.49403190612793, - 2500.1083984375)
+    v101.Size = Vector3.new(20000, 0, 20000)
+    local v102 = Instance.new("Part")
+    v102.Parent = Game.Workspace
+    v102.Anchored = true
+    v102.Position = Vector3.new(18766.751953125, - 9.709169387817383, - 2759.8818359375)
+    v102.Size = Vector3.new(20000, 0, 20000)
+    local v103 = Instance.new("Part")
+    v103.Parent = Game.Workspace
+    v103.Anchored = true
+    v103.Position = Vector3.new(19039.708984375, - 9.494030475616455, - 3743.810546875)
+    v103.Size = Vector3.new(20000, 0, 20000)
+    local v104 = Instance.new("Part")
+    v104.Parent = Game.Workspace
+    v104.Anchored = true
+    v104.Position = Vector3.new(18948.62890625, - 9.494030475616455, - 1756.02783203125)
+    v104.Size = Vector3.new(20000, 0, 20000)
+    local v105 = Instance.new("Part")
+    v105.Parent = Game.Workspace
+    v105.Anchored = true
+    v105.Position = Vector3.new(17940.4921875, - 9.278892040252686, - 755.4782104492188)
+    v105.Size = Vector3.new(20000, 0, 20000)
+    local v106 = Instance.new("Part")
+    v106.Parent = Game.Workspace
+    v106.Anchored = true
+    v106.Position = Vector3.new(18944.34375, - 9.063753604888916, - 543.2788696289062)
+    v106.Size = Vector3.new(20000, 0, 20000)
+    local v107 = Instance.new("Part")
+    v107.Parent = Game.Workspace
+    v107.Anchored = true
+    v107.Position = Vector3.new(16963.00390625, - 9.063752174377441, - 293.4074401855469)
+    v107.Size = Vector3.new(20000, 0, 20000)
+    local v108 = Instance.new("Part")
+    v108.Parent = Game.Workspace
+    v108.Anchored = true
+    v108.Position = Vector3.new(15998.7353515625, - 9.848613023757935, - 1311.015869140625)
+    v108.Size = Vector3.new(20000, 0, 20000)
+    local v109 = Instance.new("Part")
+    v109.Parent = Game.Workspace
+    v109.Anchored = true
+    v109.Position = Vector3.new(15591.837890625, - 9.633473873138428, - 296.08660888671875)
+    v109.Size = Vector3.new(20000, 0, 20000)
+    local v110 = Instance.new("Part")
+    v110.Parent = Game.Workspace
+    v110.Anchored = true
+    v110.Position = Vector3.new(14579.58203125, - 9.4183349609375, - 991.3533935546875)
+    v110.Size = Vector3.new(20000, 0, 20000)
+    local v111 = Instance.new("Part")
+    v111.Parent = Game.Workspace
+    v111.Anchored = true
+    v111.Position = Vector3.new(14294.275390625, - 9.203196048736572, - 221.879150390625)
+    v111.Size = Vector3.new(20000, 0, 20000)
+    local v112 = Instance.new("Part")
+    v112.Parent = Game.Workspace
+    v112.Anchored = true
+    v112.Position = Vector3.new(13372.7236328125, - 9.988056659698486, 73.62410736083984)
+    v112.Size = Vector3.new(20000, 0, 20000)
+    local v113 = Instance.new("Part")
+    v113.Parent = Game.Workspace
+    v113.Anchored = true
+    v113.Position = Vector3.new(12783.056640625, - 9.093517303466797, - 952.5441284179688)
+    v113.Size = Vector3.new(20000, 0, 20000)
+    local v114 = Instance.new("Part")
+    v114.Parent = Game.Workspace
+    v114.Anchored = true
+    v114.Position = Vector3.new(2003.5675048828125, - 9.569721221923828, - 1103.451416015625)
+    v114.Size = Vector3.new(20000, 0, 20000)
+    local v115 = Instance.new("Part")
+    v115.Parent = Game.Workspace
+    v115.Anchored = true
+    v115.Position = Vector3.new(2978.824951171875, - 9.354583263397217, - 1012.9195556640625)
+    v115.Size = Vector3.new(20000, 0, 20000)
+    local v116 = Instance.new("Part")
+    v116.Parent = Game.Workspace
+    v116.Anchored = true
+    v116.Position = Vector3.new(3944.885986328125, - 9.139444351196289, - 958.9783935546875)
+    v116.Size = Vector3.new(20000, 0, 20000)
+    local v117 = Instance.new("Part")
+    v117.Parent = Game.Workspace
+    v117.Anchored = true
+    v117.Position = Vector3.new(4917.93212890625, - 9.924305438995361, - 1106.58837890625)
+    v117.Size = Vector3.new(20000, 0, 20000)
+    local v118 = Instance.new("Part")
+    v118.Parent = Game.Workspace
+    v118.Anchored = true
+    v118.Position = Vector3.new(5321.544921875, - 9.709166526794434, - 1851.941162109375)
+    v118.Size = Vector3.new(20000, 0, 20000)
+    local v119 = Instance.new("Part")
+    v119.Parent = Game.Workspace
+    v119.Anchored = true
+    v119.Position = Vector3.new(2894.729736328125, - 9.92430329322815, - 3897.88720703125)
+    v119.Size = Vector3.new(20000, 0, 20000)
+    local v120 = Instance.new("Part")
+    v120.Parent = Game.Workspace
+    v120.Anchored = true
+    v120.Position = Vector3.new(1880.724609375, - 9.709164142608643, - 4258.2509765625)
+    v120.Size = Vector3.new(20000, 0, 20000)
+    local v121 = Instance.new("Part")
+    v121.Parent = Game.Workspace
+    v121.Anchored = true
+    v121.Position = Vector3.new(- 1643.215576171875, - 9.569722652435303, - 3132.36572265625)
+    v121.Size = Vector3.new(20000, 0, 20000)
+    local v122 = Instance.new("Part")
+    v122.Parent = Game.Workspace
+    v122.Anchored = true
+    v122.Position = Vector3.new(- 1772.5018310546875, - 9.354584217071533, - 2139.459716796875)
+    v122.Size = Vector3.new(20000, 0, 20000)
+    local v123 = Instance.new("Part")
+    v123.Parent = Game.Workspace
+    v123.Anchored = true
+    v123.Position = Vector3.new(- 1665.8314208984375, - 9.139444828033447, - 1128.0208740234375)
+    v123.Size = Vector3.new(20000, 0, 20000)
+    local v124 = Instance.new("Part")
+    v124.Parent = Game.Workspace
+    v124.Anchored = true
+    v124.Position = Vector3.new(- 1673.664794921875, - 9.924305438995361, - 176.67430114746094)
+    v124.Size = Vector3.new(20000, 0, 20000)
+    local v125 = Instance.new("Part")
+    v125.Parent = Game.Workspace
+    v125.Anchored = true
+    v125.Position = Vector3.new(- 1895.2357177734375, - 9.709166526794434, 789.939697265625)
+    v125.Size = Vector3.new(20000, 0, 20000)
+    local v126 = Instance.new("Part")
+    v126.Parent = Game.Workspace
+    v126.Anchored = true
+    v126.Position = Vector3.new(- 1991.6993408203125, - 9.494027614593506, 1789.4617919921875)
+    v126.Size = Vector3.new(20000, 0, 20000)
+    local v127 = Instance.new("Part")
+    v127.Parent = Game.Workspace
+    v127.Anchored = true
+    v127.Position = Vector3.new(- 2148.386962890625, - 9.278889179229736, 2777.50146484375)
+    v127.Size = Vector3.new(20000, 0, 20000)
+    local v128 = Instance.new("Part")
+    v128.Parent = Game.Workspace
+    v128.Anchored = true
+    v128.Position = Vector3.new(- 2334.718505859375, - 9.06374979019165, 3752.33056640625)
+    v128.Size = Vector3.new(20000, 0, 20000)
+    local v129 = Instance.new("Part")
+    v129.Parent = Game.Workspace
+    v129.Anchored = true
+    v129.Position = Vector3.new(- 2430.8857421875, - 9.848610401153564, 4750.89208984375)
+    v129.Size = Vector3.new(20000, 0, 20000)
+    local v130 = Instance.new("Part")
+    v130.Parent = Game.Workspace
+    v130.Anchored = true
+    v130.Position = Vector3.new(- 2477.38427734375, - 9.633471488952637, 5754.65625)
+    v130.Size = Vector3.new(20000, 0, 20000)
+    local v131 = Instance.new("Part")
+    v131.Parent = Game.Workspace
+    v131.Anchored = true
+    v131.Position = Vector3.new(- 1474.8240966796875, - 9.418332576751709, 4993.744140625)
+    v131.Size = Vector3.new(20000, 0, 20000)
+    local v132 = Instance.new("Part")
+    v132.Parent = Game.Workspace
+    v132.Anchored = true
+    v132.Position = Vector3.new(- 1239.12744140625, - 9.203193664550781, 4206.31005859375)
+    v132.Size = Vector3.new(20000, 0, 20000)
+    local v133 = Instance.new("Part")
+    v133.Parent = Game.Workspace
+    v133.Anchored = true
+    v133.Position = Vector3.new(- 1682.2164306640625, - 9.418331623077393, 6633.03125)
+    v133.Size = Vector3.new(20000, 0, 20000)
+    local v134 = Instance.new("Part")
+    v134.Parent = Game.Workspace
+    v134.Anchored = true
+    v134.Position = Vector3.new(- 1427.5582275390625, - 9.203193187713623, 7548.80224609375)
+    v134.Size = Vector3.new(20000, 0, 20000)
+    local v135 = Instance.new("Part")
+    v135.Parent = Game.Workspace
+    v135.Anchored = true
+    v135.Position = Vector3.new(- 3823.29248046875, - 9.063750267028809, 1757.0218505859375)
+    v135.Size = Vector3.new(20000, 0, 20000)
+    local v136 = Instance.new("Part")
+    v136.Parent = Game.Workspace
+    v136.Anchored = true
+    v136.Position = Vector3.new(- 4112.26171875, - 9.84861135482788, 2757.71484375)
+    v136.Size = Vector3.new(20000, 0, 20000)
+    local v137 = Instance.new("Part")
+    v137.Parent = Game.Workspace
+    v137.Anchored = true
+    v137.Position = Vector3.new(- 4299.38330078125, - 9.633472919464111, 3713.58056640625)
+    v137.Size = Vector3.new(20000, 0, 20000)
+    local v138 = Instance.new("Part")
+    v138.Parent = Game.Workspace
+    v138.Anchored = true
+    v138.Position = Vector3.new(- 4433.6865234375, - 9.4183349609375, 4715.2236328125)
+    v138.Size = Vector3.new(20000, 0, 20000)
+    local v139 = Instance.new("Part")
+    v139.Parent = Game.Workspace
+    v139.Anchored = true
+    v139.Position = Vector3.new(- 4646.71728515625, - 9.203195571899414, 5683.84765625)
+    v139.Size = Vector3.new(20000, 0, 20000)
+    local v140 = Instance.new("Part")
+    v140.Parent = Game.Workspace
+    v140.Anchored = true
+    v140.Position = Vector3.new(- 3911.37353515625, - 9.988056182861328, 6502.482421875)
+    v140.Size = Vector3.new(20000, 0, 20000)
+    local v141 = Instance.new("Part")
+    v141.Parent = Game.Workspace
+    v141.Anchored = true
+    v141.Position = Vector3.new(- 3161.617431640625, - 9.772918224334717, 6943.85986328125)
+    v141.Size = Vector3.new(20000, 0, 20000)
+    local v142 = Instance.new("Part")
+    v142.Parent = Game.Workspace
+    v142.Anchored = true
+    v142.Position = Vector3.new(- 2052.14599609375, - 9.988054275512695, 8546.2861328125)
+    v142.Size = Vector3.new(20000, 0, 20000)
+    local v143 = Instance.new("Part")
+    v143.Parent = Game.Workspace
+    v143.Anchored = true
+    v143.Position = Vector3.new(- 1400.4658203125, - 9.772915363311768, 9297.806640625)
+    v143.Size = Vector3.new(20000, 0, 20000)
+    local v144 = Instance.new("Part")
+    v144.Parent = Game.Workspace
+    v144.Anchored = true
+    v144.Position = Vector3.new(- 1190.1282958984375, - 9.44222542643547, 10259.5078125)
+    v144.Size = Vector3.new(20000, 0, 20000)
+    local v145 = Instance.new("Part")
+    v145.Parent = Game.Workspace
+    v145.Anchored = true
+    v145.Position = Vector3.new(2187.53564453125, - 9.180280685424805, 9414.32421875)
+    v145.Size = Vector3.new(20000, 0, 20000)
+    local v146 = Instance.new("Part")
+    v146.Parent = Game.Workspace
+    v146.Anchored = true
+    v146.Position = Vector3.new(2896.7841796875, - 9.180281639099121, 7566.1171875)
+    v146.Size = Vector3.new(20000, 0, 20000)
+    local v147 = Instance.new("Part")
+    v147.Parent = Game.Workspace
+    v147.Anchored = true
+    v147.Position = Vector3.new(3187.329345703125, - 9.965142488479614, 6555.640625)
+    v147.Size = Vector3.new(20000, 0, 20000)
+    local v148 = Instance.new("Part")
+    v148.Parent = Game.Workspace
+    v148.Anchored = true
+    v148.Position = Vector3.new(3379.880615234375, - 9.750005722045898, 5558.48876953125)
+    v148.Size = Vector3.new(20000, 0, 20000)
+    local v149 = Instance.new("Part")
+    v149.Parent = Game.Workspace
+    v149.Anchored = true
+    v149.Position = Vector3.new(3961.218017578125, - 9.75402545928955, 6907.60400390625)
+    v149.Size = Vector3.new(20000, 0, 20000)
+    local v150 = Instance.new("Part")
+    v150.Parent = Game.Workspace
+    v150.Anchored = true
+    v150.Position = Vector3.new(3976.142822265625, - 9.538886547088623, 7871.6318359375)
+    v150.Size = Vector3.new(20000, 0, 20000)
+    local v151 = Instance.new("Part")
+    v151.Parent = Game.Workspace
+    v151.Anchored = true
+    v151.Position = Vector3.new(- 3126.83544921875, - 9.84867262840271, 802.1668090820312)
+    v151.Size = Vector3.new(20000, 0, 20000)
+    local v152 = Instance.new("Part")
+    v152.Parent = Game.Workspace
+    v152.Anchored = true
+    v152.Position = Vector3.new(- 3662.20703125, - 9.633533477783203, - 80.66658020019531)
+    v152.Size = Vector3.new(20000, 0, 20000)
+    local v153 = Instance.new("Part")
+    v153.Parent = Game.Workspace
+    v153.Anchored = true
+    v153.Position = Vector3.new(- 3609.484130859375, - 9.418395519256592, - 1017.3029174804688)
+    v153.Size = Vector3.new(20000, 0, 20000)
+    local v154 = Instance.new("Part")
+    v154.Parent = Game.Workspace
+    v154.Anchored = true
+    v154.Position = Vector3.new(- 3753.300537109375, - 9.20325517654419, - 1995.7613525390625)
+    v154.Size = Vector3.new(20000, 0, 20000)
+    local v155 = Instance.new("Part")
+    v155.Parent = Game.Workspace
+    v155.Anchored = true
+    v155.Position = Vector3.new(- 4743.466796875, - 9.988116025924683, - 2393.3125)
+    v155.Size = Vector3.new(20000, 0, 20000)
+    local v156 = Instance.new("Part")
+    v156.Parent = Game.Workspace
+    v156.Anchored = true
+    v156.Position = Vector3.new(- 5736.89892578125, - 9.772977828979492, - 2010.5301513671875)
+    v156.Size = Vector3.new(20000, 0, 20000)
+    local v157 = Instance.new("Part")
+    v157.Parent = Game.Workspace
+    v157.Anchored = true
+    v157.Position = Vector3.new(- 4006.782958984375, - 9.772977352142334, - 3332.644287109375)
+    v157.Size = Vector3.new(20000, 0, 20000)
+    local v158 = Instance.new("Part")
+    v158.Parent = Game.Workspace
+    v158.Anchored = true
+    v158.Position = Vector3.new(- 3065.00146484375, - 9.557837963104248, - 3415.263916015625)
+    v158.Size = Vector3.new(20000, 0, 20000)
+    local v159 = Instance.new("Part")
+    v159.Parent = Game.Workspace
+    v159.Anchored = true
+    v159.Position = Vector3.new(- 4635.92431640625, - 9.418395519256592, - 103.13423919677734)
+    v159.Size = Vector3.new(20000, 0, 20000)
+    local v160 = Instance.new("Part")
+    v160.Parent = Game.Workspace
+    v160.Anchored = true
+    v160.Position = Vector3.new(- 5439.66796875, - 9.203256607055664, 866.9227294921875)
+    v160.Size = Vector3.new(20000, 0, 20000)
+    local v161 = Instance.new("Part")
+    v161.Parent = Game.Workspace
+    v161.Anchored = true
+    v161.Position = Vector3.new(- 5770.49462890625, - 9.988117933273315, 1845.7347412109375)
+    v161.Size = Vector3.new(20000, 0, 20000)
+    local v162 = Instance.new("Part")
+    v162.Parent = Game.Workspace
+    v162.Anchored = true
+    v162.Position = Vector3.new(- 5798.58203125, - 9.772978782653809, 2813.786376953125)
+    v162.Size = Vector3.new(20000, 0, 20000)
+    local v163 = Instance.new("Part")
+    v163.Parent = Game.Workspace
+    v163.Anchored = true
+    v163.Position = Vector3.new(- 6413.759765625, - 9.988118171691895, 45.978721618652344)
+    v163.Size = Vector3.new(20000, 0, 20000)
+    local v164 = Instance.new("Part")
+    v164.Parent = Game.Workspace
+    v164.Anchored = true
+    v164.Position = Vector3.new(- 7281.08837890625, - 9.342700004577637, - 2053.28173828125)
+    v164.Size = Vector3.new(20000, 0, 20000)
+    local v165 = Instance.new("Part")
+    v165.Parent = Game.Workspace
+    v165.Anchored = true
+    v165.Position = Vector3.new(- 5939.85009765625, - 9.557838439941406, - 2980.478515625)
+    v165.Size = Vector3.new(20000, 0, 20000)
+    local v166 = Instance.new("Part")
+    v166.Parent = Game.Workspace
+    v166.Anchored = true
+    v166.Position = Vector3.new(3151.140380859375, - 9.876421451568604, 645.57568359375)
+    v166.Size = Vector3.new(20000, 0, 20000)
+    local v167 = Instance.new("Part")
+    v167.Parent = Game.Workspace
+    v167.Anchored = true
+    v167.Position = Vector3.new(4175.984375, - 9.661282062530518, 688.4006958007812)
+    v167.Size = Vector3.new(20000, 0, 20000)
+    local v168 = Instance.new("Part")
+    v168.Parent = Game.Workspace
+    v168.Anchored = true
+    v168.Position = Vector3.new(3677.688232421875, - 9.44614315032959, 1697.672607421875)
+    v168.Size = Vector3.new(20000, 0, 20000)
+    local v169 = Instance.new("Part")
+    v169.Parent = Game.Workspace
+    v169.Anchored = true
+    v169.Position = Vector3.new(2702.431640625, - 9.231003761291504, 2118.501953125)
+    v169.Size = Vector3.new(20000, 0, 20000)
+    local v170 = Instance.new("Part")
+    v170.Parent = Game.Workspace
+    v170.Anchored = true
+    v170.Position = Vector3.new(3402.743896484375, - 9.015864849090576, 3122.62060546875)
+    v170.Size = Vector3.new(20000, 0, 20000)
+    local v171 = Instance.new("Part")
+    v171.Parent = Game.Workspace
+    v171.Anchored = true
+    v171.Position = Vector3.new(3311.645263671875, - 9.800727367401123, 4067.2041015625)
+    v171.Size = Vector3.new(20000, 0, 20000)
+    local v172 = Instance.new("Part")
+    v172.Parent = Game.Workspace
+    v172.Anchored = true
+    v172.Position = Vector3.new(4368.765625, - 9.800727128982544, 3317.60009765625)
+    v172.Size = Vector3.new(20000, 0, 20000)
+    local v173 = Instance.new("Part")
+    v173.Parent = Game.Workspace
+    v173.Anchored = true
+    v173.Position = Vector3.new(4876.06005859375, - 9.585587978363037, 4320.9013671875)
+    v173.Size = Vector3.new(20000, 0, 20000)
+    local v174 = Instance.new("Part")
+    v174.Parent = Game.Workspace
+    v174.Anchored = true
+    v174.Position = Vector3.new(5258.15771484375, - 9.370449542999268, 5299.39990234375)
+    v174.Size = Vector3.new(20000, 0, 20000)
+    local v175 = Instance.new("Part")
+    v175.Parent = Game.Workspace
+    v175.Anchored = true
+    v175.Position = Vector3.new(5620.71923828125, - 9.155311584472656, 6254.36181640625)
+    v175.Size = Vector3.new(20000, 0, 20000)
+    local v176 = Instance.new("Part")
+    v176.Parent = Game.Workspace
+    v176.Anchored = true
+    v176.Position = Vector3.new(5176.56591796875, - 9.585587978363037, 2400.698486328125)
+    v176.Size = Vector3.new(20000, 0, 20000)
+    local v177 = Instance.new("Part")
+    v177.Parent = Game.Workspace
+    v177.Anchored = true
+    v177.Position = Vector3.new(6081.796875, - 9.370450019836426, 3295.412109375)
+    v177.Size = Vector3.new(20000, 0, 20000)
+    local v178 = Instance.new("Part")
+    v178.Parent = Game.Workspace
+    v178.Anchored = true
+    v178.Position = Vector3.new(5741.1318359375, - 9.37044906616211, 1432.1351318359375)
+    v178.Size = Vector3.new(20000, 0, 20000)
+    local v179 = Instance.new("Part")
+    v179.Parent = Game.Workspace
+    v179.Anchored = true
+    v179.Position = Vector3.new(5813.77685546875, - 9.155310153961182, 415.4798889160156)
+    v179.Size = Vector3.new(20000, 0, 20000)
+    local v180 = Instance.new("Part")
+    v180.Parent = Game.Workspace
+    v180.Anchored = true
+    v180.Position = Vector3.new(6412.279296875, - 9.940170764923096, - 563.8019409179688)
+    v180.Size = Vector3.new(20000, 0, 20000)
+    local v181 = Instance.new("Part")
+    v181.Parent = Game.Workspace
+    v181.Anchored = true
+    v181.Position = Vector3.new(6898.72900390625, - 9.725030422210693, - 1527.509765625)
+    v181.Size = Vector3.new(20000, 0, 20000)
+    local v182 = Instance.new("Part")
+    v182.Parent = Game.Workspace
+    v182.Anchored = true
+    v182.Position = Vector3.new(- 6474.01318359375, - 9.557838439941406, - 1076.6319580078125)
+    v182.Size = Vector3.new(20000, 0, 20000)
+    local v183 = Instance.new("Part")
+    v183.Parent = Game.Workspace
+    v183.Anchored = true
+    v183.Position = Vector3.new(- 6474.01318359375, - 9.557838439941406, - 1076.6319580078125)
+    v183.Size = Vector3.new(20000, 0, 20000)
+    local v184 = Instance.new("Part")
+    v184.Parent = Game.Workspace
+    v184.Anchored = true
+    v184.Position = Vector3.new(- 6474.01318359375, - 9.557838439941406, - 1076.6319580078125)
+    v184.Size = Vector3.new(20000, 0, 20000)
+    local v185 = Instance.new("Part")
+    v185.Parent = Game.Workspace
+    v185.Anchored = true
+    v185.Position = Vector3.new(- 6474.01318359375, - 9.557838439941406, - 1076.6319580078125)
+    v185.Size = Vector3.new(20000, 0, 20000)
+    local v186 = Instance.new("Part")
+    v186.Parent = Game.Workspace
+    v186.Anchored = true
+    v186.Position = Vector3.new(- 6474.01318359375, - 9.557838439941406, - 1076.6319580078125)
+    v186.Size = Vector3.new(20000, 0, 20000)
+    local v187 = Instance.new("Part")
+    v187.Parent = Game.Workspace
+    v187.Anchored = true
+    v187.Position = Vector3.new(- 6474.01318359375, - 9.557838439941406, - 1076.6319580078125)
+    v187.Size = Vector3.new(20000, 0, 20000)
+    local v188 = Instance.new("Part")
+    v188.Parent = Game.Workspace
+    v188.Anchored = true
+    v188.Position = Vector3.new(- 6474.01318359375, - 9.557838439941406, - 1076.6319580078125)
+    v188.Size = Vector3.new(20000, 0, 20000)
+    local v189 = Instance.new("Part")
+    v189.Parent = Game.Workspace
+    v189.Anchored = true
+    v189.Position = Vector3.new(- 6474.01318359375, - 9.557838439941406, - 1076.6319580078125)
+    v189.Size = Vector3.new(20000, 0, 20000)
+    local v190 = Instance.new("Part")
+    v190.Parent = Game.Workspace
+    v190.Anchored = true
+    v190.Position = Vector3.new(- 6474.01318359375, - 9.557838439941406, - 1076.6319580078125)
+    v190.Size = Vector3.new(20000, 0, 20000)
+    local v191 = Instance.new("Part")
+    v191.Parent = Game.Workspace
+    v191.Anchored = true
+    v191.Position = Vector3.new(- 6474.01318359375, - 9.557838439941406, - 1076.6319580078125)
+    v191.Size = Vector3.new(20000, 0, 20000)
+    local v192 = Instance.new("Part")
+    v192.Parent = Game.Workspace
+    v192.Anchored = true
+    v192.Position = Vector3.new(- 6474.01318359375, - 9.557838439941406, - 1076.6319580078125)
+    v192.Size = Vector3.new(20000, 0, 20000)
+    local v193 = Instance.new("Part")
+    v193.Parent = Game.Workspace
+    v193.Anchored = true
+    v193.Position = Vector3.new(- 6474.01318359375, - 9.557838439941406, - 1076.6319580078125)
+    v193.Size = Vector3.new(20000, 0, 20000)
+    local v194 = Instance.new("Part")
+    v194.Parent = Game.Workspace
+    v194.Anchored = true
+    v194.Position = Vector3.new(- 6474.01318359375, - 9.557838439941406, - 1076.6319580078125)
+    v194.Size = Vector3.new(20000, 0, 20000)
+    local v195 = Instance.new("Part")
+    v195.Parent = Game.Workspace
+    v195.Anchored = true
+    v195.Position = Vector3.new(- 6474.01318359375, - 9.557838439941406, - 1076.6319580078125)
+    v195.Size = Vector3.new(20000, 0, 20000)
+    local v196 = Instance.new("Part")
+    v196.Parent = Game.Workspace
+    v196.Anchored = true
+    v196.Position = Vector3.new(- 6474.01318359375, - 9.557838439941406, - 1076.6319580078125)
+    v196.Size = Vector3.new(20000, 0, 20000)
+    local v197 = Instance.new("Part")
+    v197.Parent = Game.Workspace
+    v197.Anchored = true
+    v197.Position = Vector3.new(- 6474.01318359375, - 9.557838439941406, - 1076.6319580078125)
+    v197.Size = Vector3.new(20000, 0, 20000)
+    local v198 = Instance.new("Part")
+    v198.Parent = Game.Workspace
+    v198.Anchored = true
+    v198.Position = Vector3.new(- 6474.01318359375, - 9.557838439941406, - 1076.6319580078125)
+    v198.Size = Vector3.new(20000, 0, 20000)
+    local v199 = Instance.new("Part")
+    v199.Parent = Game.Workspace
+    v199.Anchored = true
+    v199.Position = Vector3.new(- 6474.01318359375, - 9.557838439941406, - 1076.6319580078125)
+    v199.Size = Vector3.new(20000, 0, 20000)
+    local v200 = Instance.new("Part")
+    v200.Parent = Game.Workspace
+    v200.Anchored = true
+    v200.Position = Vector3.new(- 6474.01318359375, - 9.557838439941406, - 1076.6319580078125)
+    v200.Size = Vector3.new(20000, 0, 20000)
+    local v201 = Instance.new("Part")
+    v201.Parent = Game.Workspace
+    v201.Anchored = true
+    v201.Position = Vector3.new(- 6474.01318359375, - 9.557838439941406, - 1076.6319580078125)
+    v201.Size = Vector3.new(20000, 0, 20000)
+    local v202 = Instance.new("Part")
+    v202.Parent = Game.Workspace
+    v202.Anchored = true
+    v202.Position = Vector3.new(- 6474.01318359375, - 9.557838439941406, - 1076.6319580078125)
+    v202.Size = Vector3.new(20000, 0, 20000)
+    local v203 = Instance.new("Part")
+    v203.Parent = Game.Workspace
+    v203.Anchored = true
+    v203.Position = Vector3.new(- 6474.01318359375, - 9.557838439941406, - 1076.6319580078125)
+    v203.Size = Vector3.new(20000, 0, 20000)
+    local v204 = Instance.new("Part")
+    v204.Parent = Game.Workspace
+    v204.Anchored = true
+    v204.Position = Vector3.new(- 6474.01318359375, - 9.557838439941406, - 1076.6319580078125)
+    v204.Size = Vector3.new(20000, 0, 20000)
+    local v205 = Instance.new("Part")
+    v205.Parent = Game.Workspace
+    v205.Anchored = true
+    v205.Position = Vector3.new(- 6474.01318359375, - 9.557838439941406, - 1076.6319580078125)
+    v205.Size = Vector3.new(20000, 0, 20000)
+    local v206 = Instance.new("Part")
+    v206.Parent = Game.Workspace
+    v206.Anchored = true
+    v206.Position = Vector3.new(- 6474.01318359375, - 9.557838439941406, - 1076.6319580078125)
+    v206.Size = Vector3.new(20000, 0, 20000)
+    local v207 = Instance.new("Part")
+    v207.Parent = Game.Workspace
+    v207.Anchored = true
+    v207.Position = Vector3.new(- 6474.01318359375, - 9.557838439941406, - 1076.6319580078125)
+    v207.Size = Vector3.new(20000, 0, 20000)
+    local v208 = Instance.new("Part")
+    v208.Parent = Game.Workspace
+    v208.Anchored = true
+    v208.Position = Vector3.new(- 6474.01318359375, - 9.557838439941406, - 1076.6319580078125)
+    v208.Size = Vector3.new(20000, 0, 20000)
+    local v209 = Instance.new("Part")
+    v209.Parent = Game.Workspace
+    v209.Anchored = true
+    v209.Position = Vector3.new(- 6474.01318359375, - 9.557838439941406, - 1076.6319580078125)
+    v209.Size = Vector3.new(20000, 0, 20000)
+    local v210 = Instance.new("Part")
+    v210.Parent = Game.Workspace
+    v210.Anchored = true
+    v210.Position = Vector3.new(- 6474.01318359375, - 9.557838439941406, - 1076.6319580078125)
+    v210.Size = Vector3.new(20000, 0, 20000)
+    local v211 = Instance.new("Part")
+    v211.Parent = Game.Workspace
+    v211.Anchored = true
+    v211.Position = Vector3.new(- 6474.01318359375, - 9.557838439941406, - 1076.6319580078125)
+    v211.Size = Vector3.new(20000, 0, 20000)
+    local v212 = Instance.new("Part")
+    v212.Parent = Game.Workspace
+    v212.Anchored = true
+    v212.Position = Vector3.new(- 6474.01318359375, - 9.557838439941406, - 1076.6319580078125)
+    v212.Size = Vector3.new(20000, 0, 20000)
+end)
+local vu213 = {
+    "mightygems2500",
+    "ultimate250",
+    "spacegems50",
+    "megalift50",
+    "speedy50",
+    "epicreward500",
+    "MillionWarriors",
+    "frostgems10",
+    "Musclestorm50",
+    "Skyagility50",
+    "galaxycrystal50",
+    "supermuscle100",
+    "superpunch100",
+    "launch250"
+}
+local function vu220()
+    local vu214 = game:GetService("ReplicatedStorage").rEvents.codeRemote
+    local v215, v216, v217 = ipairs(vu213)
+    while true do
+        local v218
+        v217, v218 = v215(v216, v217)
+        if v217 == nil then
+            break
+        end
+        local vu219 = {
+            v218
+        }
+        pcall(function()
+            vu214:InvokeServer(unpack(vu219))
+        end)
+        task.wait(0.2)
+    end
+end
+v2:AddSwitch("Redeem All Codes", function(p221)
+    if p221 then
+        task.spawn(vu220)
+    end
+end)
+local v222 = v1:AddTab("Farm Strength")
+v222:Show()
+v222:AddLabel("------------- Fast Machine -------------")
+local v224 = v222:AddDropdown("Grind Speed", function(p223)
+    farmSpeed = p223
+end)
+v224:Add("Normal")
+v224:Add("Medium")
+v224:Add("Fast")
+v222:AddSwitch("Fast Grind", function(p225)
+    local vu226 = game:GetService("Players").LocalPlayer
+    local vu227 = game:GetService("VirtualInputManager")
+    grinding = p225
+    threads = {}
+    local function v234(p228)
+        local v229 = workspace.machinesFolder:FindFirstChild(p228)
+        if not v229 then
+            local v230, v231, v232 = pairs(workspace:GetChildren())
+            while true do
+                local v233
+                v232, v233 = v230(v231, v232)
+                if v232 == nil then
+                    break
+                end
+                if v233:IsA("Folder") and v233.Name:find("machines") then
+                    v229 = v233:FindFirstChild(p228)
+                    if v229 then
+                        break
+                    end
+                end
+            end
+        end
+        return v229
+    end
+    local function vu235()
+        vu227:SendKeyEvent(true, "E", false, game)
+        task.wait(0.1)
+        vu227:SendKeyEvent(false, "E", false, game)
+    end
+    local function v238(p236)
+        local v237 = vu226.Character
+        if v237 then
+            v237 = vu226.Character:FindFirstChild("HumanoidRootPart")
+        end
+        if not (v237 and p236) then
+            return false
+        end
+        v237.CFrame = p236.CFrame * CFrame.new(0, 3, 0)
+        repeat
+            task.wait(0.1)
+            vu235()
+        until vu226.Character.Humanoid.Sit or not grinding
+        return vu226.Character.Humanoid.Sit
+    end
+    local function v239()
+        if vu226.Character and vu226.Character:FindFirstChild("Humanoid") then
+            vu226.Character.Humanoid.Sit = false
+        end
+    end
+    if p225 then
+        local v240 = v234("Jungle Bar Lift")
+        if v240 then
+            v240 = v240:FindFirstChild("interactSeat")
+        end
+        if v240 and v240.Parent then
+            v238(v240)
+        end
+        local vu241 = vu226
+        for v242 = 1, 12 do
+            threads[v242] = task.spawn(function()
+                while grinding and vu241.Character.Humanoid.Sit do
+                    vu241.muscleEvent:FireServer("rep")
+                    if farmSpeed ~= "Normal" then
+                        if farmSpeed ~= "Medium" then
+                            if farmSpeed == "Fast" then
+                                task.wait(1e-25)
+                            end
+                        else
+                            task.wait(0.1)
+                        end
+                    else
+                        task.wait(0.5)
+                    end
+                end
+            end)
+        end
+    else
+        grinding = false
+        v239()
+        threads = {}
+    end
+end):Set(false)
+v222:AddSwitch("Hide pop ups", function(p243)
+    local v244 = game:GetService("ReplicatedStorage")
+    local v245 = v244:FindFirstChild("strengthFrame")
+    local v246 = v244:FindFirstChild("durabilityFrame")
+    if v245 then
+        v245.Visible = not p243
+    end
+    if v246 then
+        v246.Visible = not p243
+    end
+end)
+v222:AddLabel("------------- Fast Tools -------------")
+v222:AddSwitch("Auto Fast Strength", function(p247)
+    isAutoStrength = p247
+    local v248 = game.Players.LocalPlayer
+    local v249 = v248:FindFirstChild("Backpack")
+    while isAutoStrength do
+        wait(0.001)
+        local v250 = v249 and v249:FindFirstChild("Weight")
+        if v250 then
+            v248.Character.Humanoid:EquipTool(v250)
+        end
+        game:GetService("Players").LocalPlayer.muscleEvent:FireServer(unpack({
+            "rep"
+        }))
+    end
+    if not isAutoStrength then
+        local v251 = v248.Character:FindFirstChildOfClass("Tool")
+        if v251 and v251.Name == "Weight" then
+            v251.Parent = v249
+        end
+    end
+end):Set(false)
+v222:AddSwitch("Auto Fast Pushups", function(p252)
+    isAutoPushups = p252
+    local v253 = game.Players.LocalPlayer
+    local v254 = v253:FindFirstChild("Backpack")
+    while isAutoPushups do
+        wait(0.001)
+        local v255 = v254 and v254:FindFirstChild("Pushups")
+        if v255 then
+            v253.Character.Humanoid:EquipTool(v255)
+        end
+        game:GetService("Players").LocalPlayer.muscleEvent:FireServer(unpack({
+            "rep"
+        }))
+    end
+    if not isAutoPushups then
+        local v256 = v253.Character:FindFirstChildOfClass("Tool")
+        if v256 and v256.Name == "Pushups" then
+            v256.Parent = v254
+        end
+    end
+end):Set(false)
+v222:AddSwitch("Auto Fast Situps", function(p257)
+    isAutoSitups = p257
+    local v258 = game.Players.LocalPlayer
+    local v259 = v258:FindFirstChild("Backpack")
+    while isAutoSitups do
+        wait(0.001)
+        local v260 = v259 and v259:FindFirstChild("Situps")
+        if v260 then
+            v258.Character.Humanoid:EquipTool(v260)
+        end
+        game:GetService("Players").LocalPlayer.muscleEvent:FireServer(unpack({
+            "rep"
+        }))
+    end
+    if not isAutoSitups then
+        local v261 = v258.Character:FindFirstChildOfClass("Tool")
+        if v261 and v261.Name == "Situps" then
+            v261.Parent = v259
+        end
+    end
+end):Set(false)
+v222:AddSwitch("Auto Fast Handstands", function(p262)
+    isAutoHandstands = p262
+    local v263 = game.Players.LocalPlayer
+    local v264 = v263:FindFirstChild("Backpack")
+    while isAutoHandstands do
+        wait(0.001)
+        local v265 = v264 and v264:FindFirstChild("Handstands")
+        if v265 then
+            v263.Character.Humanoid:EquipTool(v265)
+        end
+        game:GetService("Players").LocalPlayer.muscleEvent:FireServer(unpack({
+            "rep"
+        }))
+    end
+    if not isAutoHandstands then
+        local v266 = v263.Character:FindFirstChildOfClass("Tool")
+        if v266 and v266.Name == "Handstands" then
+            v266.Parent = v264
+        end
+    end
+end):Set(false)
+local v267 = v1:AddTab("Farm Durability")
+v267:Show()
+v267:AddLabel("------------- Auto Punch -------------")
+v267:AddSwitch("Auto Punch", function(p268)
+    isAutoPunch = p268
+    local vu269 = game.Players.LocalPlayer
+    local v270 = vu269
+    local vu271 = vu269.FindFirstChild(v270, "Backpack")
+    task.spawn(function()
+        while isAutoPunch do
+            task.wait(0.001)
+            local v272 = vu271 and vu271:FindFirstChild("Punch")
+            if v272 then
+                vu269.Character.Humanoid:EquipTool(v272)
+            end
+            local v273 = vu269:FindFirstChild("muscleEvent")
+            if v273 then
+                v273:FireServer("punch", "rightHand")
+                v273:FireServer("punch", "leftHand")
+            end
+        end
+        if not isAutoPunch then
+            local v274 = vu269.Character:FindFirstChildOfClass("Tool")
+            if v274 and v274.Name == "Punch" then
+                v274.Parent = vu271
+            end
+        end
+    end)
+end):Set(false)
+v267:AddLabel("------------- Rocks -------------")
+v267:AddSwitch("Ancient Jungle Rock", function(p275)
+    if p275 then
+        local v276 = game.Players.LocalPlayer
+        local v277 = (v276.Character or v276.CharacterAdded:Wait()):WaitForChild("LeftHand")
+        local v278 = game.Workspace.machinesFolder:FindFirstChild("Ancient Jungle Rock"):FindFirstChild("Rock")
+        _G.jungleautorock = true
+        while _G.jungleautorock do
+            if v278 then
+                v278.Size = Vector3.new(2, 1, 1)
+                v278.Transparency = 1
+                local v279, v280, v281 = pairs(v278.rockGui:GetChildren())
+                while true do
+                    local v282
+                    v281, v282 = v279(v280, v281)
+                    if v281 == nil then
+                        break
+                    end
+                    v282.Visible = false
+                end
+                v278.CanCollide = false
+                if v278:FindFirstChild("rockEmitter") then
+                    v278.rockEmitter:Destroy()
+                end
+                if v278:FindFirstChild("hoopParticle") then
+                    v278.hoopParticle:Destroy()
+                end
+                if v278:FindFirstChild("lavaParticle") then
+                    v278.lavaParticle:Destroy()
+                end
+                v278.CFrame = v277.CFrame
+            else
+                warn("Rock not found.")
+            end
+            wait()
+        end
+    else
+        local v288, _ = pcall(function()
+            local v283 = game.Workspace.machinesFolder:FindFirstChild("Ancient Jungle Rock"):FindFirstChild("Rock")
+            _G.jungleautorock = false
+            if v283 then
+                local v284, v285, v286 = pairs(v283.rockGui:GetChildren())
+                while true do
+                    local v287
+                    v286, v287 = v284(v285, v286)
+                    if v286 == nil then
+                        break
+                    end
+                    v287.Visible = true
+                end
+                v283.CanCollide = true
+                v283.Transparency = 0
+                v283.CFrame = CFrame.new(v283.originalPosition.Value)
+                v283.Size = Vector3.new(23.18409538269043, 20.20000648498535, 24.44658088684082)
+            else
+                warn("Rock not found in Ancient Jungle.")
+            end
+        end)
+        if not v288 then
+            warn("Error turning Ancient Jungle Rock off.")
+        end
+    end
+end):Set(false)
+v267:AddSwitch("Muscle King Rock", function(p289)
+    if p289 then
+        local v290 = game.Players.LocalPlayer
+        local v291 = (v290.Character or v290.CharacterAdded:Wait()):WaitForChild("LeftHand")
+        local v292 = game.Workspace.machinesFolder:FindFirstChild("Muscle King Mountain"):FindFirstChild("Rock")
+        _G.musclekingautorock = true
+        while _G.musclekingautorock do
+            if v292 then
+                v292.Size = Vector3.new(2, 1, 1)
+                v292.Transparency = 1
+                local v293, v294, v295 = pairs(v292.rockGui:GetChildren())
+                while true do
+                    local v296
+                    v295, v296 = v293(v294, v295)
+                    if v295 == nil then
+                        break
+                    end
+                    v296.Visible = false
+                end
+                v292.CanCollide = false
+                if v292:FindFirstChild("rockEmitter") then
+                    v292.rockEmitter:Destroy()
+                end
+                if v292:FindFirstChild("hoopParticle") then
+                    v292.hoopParticle:Destroy()
+                end
+                if v292:FindFirstChild("lavaParticle") then
+                    v292.lavaParticle:Destroy()
+                end
+                v292.CFrame = v291.CFrame
+            else
+                warn("Rock not found.")
+            end
+            wait()
+        end
+    else
+        local _, _ = pcall(function()
+            local v297 = game.Workspace.machinesFolder:FindFirstChild("Muscle King Mountain"):FindFirstChild("Rock")
+            _G.musclekingautorock = false
+            if v297 then
+                local v298, v299, v300 = pairs(v297.rockGui:GetChildren())
+                while true do
+                    local v301
+                    v300, v301 = v298(v299, v300)
+                    if v300 == nil then
+                        break
+                    end
+                    v301.Visible = true
+                end
+                v297.CanCollide = true
+                v297.Transparency = 0
+                v297.CFrame = CFrame.new(v297.originalPosition.Value)
+                v297.Size = Vector3.new(141.97381591796875, 123.69998931884766, 149.70497131347656)
+            else
+                warn("Rock not found in Muscle King Mountain.")
+            end
+        end)
+    end
+end):Set(false)
+v267:AddSwitch("Rock Of Legends", function(p302)
+    if p302 then
+        local v303 = game.Players.LocalPlayer
+        local v304 = (v303.Character or v303.CharacterAdded:Wait()):WaitForChild("LeftHand")
+        local v305 = game.Workspace.machinesFolder:FindFirstChild("Rock Of Legends"):FindFirstChild("Rock")
+        _G.legendsautorock = true
+        while _G.legendsautorock do
+            if v305 then
+                v305.Size = Vector3.new(2, 1, 1)
+                v305.Transparency = 1
+                local v306, v307, v308 = pairs(v305.rockGui:GetChildren())
+                while true do
+                    local v309
+                    v308, v309 = v306(v307, v308)
+                    if v308 == nil then
+                        break
+                    end
+                    v309.Visible = false
+                end
+                v305.CanCollide = false
+                if v305:FindFirstChild("rockEmitter") then
+                    v305.rockEmitter:Destroy()
+                end
+                if v305:FindFirstChild("hoopParticle") then
+                    v305.hoopParticle:Destroy()
+                end
+                if v305:FindFirstChild("lavaParticle") then
+                    v305.lavaParticle:Destroy()
+                end
+                v305.CFrame = v304.CFrame
+            else
+                warn("Rock not found.")
+            end
+            wait()
+        end
+    else
+        local _, _ = pcall(function()
+            local v310 = game.Workspace.machinesFolder:FindFirstChild("Rock Of Legends"):FindFirstChild("Rock")
+            _G.legendsautorock = false
+            if v310 then
+                local v311, v312, v313 = pairs(v310.rockGui:GetChildren())
+                while true do
+                    local v314
+                    v313, v314 = v311(v312, v313)
+                    if v313 == nil then
+                        break
+                    end
+                    v314.Visible = true
+                end
+                v310.CanCollide = true
+                v310.Transparency = 0
+                v310.CFrame = CFrame.new(v310.originalPosition.Value)
+                v310.Size = Vector3.new(106.04995727539062, 92.39998626708984, 111.82489013671875)
+            else
+                warn("Rock not found.")
+            end
+        end)
+    end
+end):Set(false)
+v267:AddSwitch("Inferno Rock", function(p315)
+    if p315 then
+        local v316 = game.Players.LocalPlayer
+        local v317 = (v316.Character or v316.CharacterAdded:Wait()):WaitForChild("LeftHand")
+        local v318 = game.Workspace.machinesFolder:FindFirstChild("Inferno Rock"):FindFirstChild("Rock")
+        _G.infernoautorock = true
+        while _G.infernoautorock do
+            if v318 then
+                v318.Size = Vector3.new(2, 1, 1)
+                v318.Transparency = 1
+                local v319, v320, v321 = pairs(v318.rockGui:GetChildren())
+                while true do
+                    local v322
+                    v321, v322 = v319(v320, v321)
+                    if v321 == nil then
+                        break
+                    end
+                    v322.Visible = false
+                end
+                v318.CanCollide = false
+                if v318:FindFirstChild("rockEmitter") then
+                    v318.rockEmitter:Destroy()
+                end
+                if v318:FindFirstChild("hoopParticle") then
+                    v318.hoopParticle:Destroy()
+                end
+                if v318:FindFirstChild("lavaParticle") then
+                    v318.lavaParticle:Destroy()
+                end
+                v318.CFrame = v317.CFrame
+            else
+                warn("Rock not found.")
+            end
+            wait()
+        end
+    else
+        local _, _ = pcall(function()
+            local v323 = game.Workspace.machinesFolder:FindFirstChild("Inferno Rock"):FindFirstChild("Rock")
+            _G.infernoautorock = false
+            if v323 then
+                local v324, v325, v326 = pairs(v323.rockGui:GetChildren())
+                while true do
+                    local v327
+                    v326, v327 = v324(v325, v326)
+                    if v326 == nil then
+                        break
+                    end
+                    v327.Visible = true
+                end
+                v323.CanCollide = true
+                v323.Transparency = 0
+                v323.CFrame = CFrame.new(v323.originalPosition.Value)
+                v323.Size = Vector3.new(80.6851577758789, 70.2999496459961, 85.07884979248047)
+            else
+                warn("Rock not found in Muscle King Mountain.")
+            end
+        end)
+    end
+end):Set(false)
+v267:AddSwitch("Mystic Rock", function(p328)
+    if p328 then
+        local v329 = game.Players.LocalPlayer
+        local v330 = (v329.Character or v329.CharacterAdded:Wait()):WaitForChild("LeftHand")
+        local v331 = game.Workspace.machinesFolder:FindFirstChild("Mystic Rock"):FindFirstChild("Rock")
+        _G.mysticautorock = true
+        while _G.mysticautorock do
+            if v331 then
+                v331.Size = Vector3.new(2, 1, 1)
+                v331.Transparency = 1
+                local v332, v333, v334 = pairs(v331.rockGui:GetChildren())
+                while true do
+                    local v335
+                    v334, v335 = v332(v333, v334)
+                    if v334 == nil then
+                        break
+                    end
+                    v335.Visible = false
+                end
+                v331.CanCollide = false
+                if v331:FindFirstChild("rockEmitter") then
+                    v331.rockEmitter:Destroy()
+                end
+                if v331:FindFirstChild("hoopParticle") then
+                    v331.hoopParticle:Destroy()
+                end
+                if v331:FindFirstChild("lavaParticle") then
+                    v331.lavaParticle:Destroy()
+                end
+                v331.CFrame = v330.CFrame
+            else
+                warn("Rock not found.")
+            end
+            wait()
+        end
+    else
+        local _, _ = pcall(function()
+            local v336 = game.Workspace.machinesFolder:FindFirstChild("Mystic Rock"):FindFirstChild("Rock")
+            _G.mysticautorock = false
+            if v336 then
+                local v337, v338, v339 = pairs(v336.rockGui:GetChildren())
+                while true do
+                    local v340
+                    v339, v340 = v337(v338, v339)
+                    if v339 == nil then
+                        break
+                    end
+                    v340.Visible = true
+                end
+                v336.CanCollide = true
+                v336.Transparency = 0
+                v336.CFrame = CFrame.new(v336.originalPosition.Value)
+                v336.Size = Vector3.new(106.04995727539062, 92.39998626708984, 111.82489013671875)
+            else
+                warn("Rock not found in Muscle King Mountain.")
+            end
+        end)
+    end
+end):Set(false)
+v267:AddSwitch("Frozen Rock", function(p341)
+    local v342 = game.Players.LocalPlayer
+    local v343 = (v342.Character or v342.CharacterAdded:Wait()):WaitForChild("LeftHand")
+    local vu344 = game.Workspace.machinesFolder:FindFirstChild("Frozen Rock"):FindFirstChild("Rock")
+    if p341 then
+        _G.frozenautorock = true
+        while _G.frozenautorock do
+            if vu344 then
+                vu344.Size = Vector3.new(2, 1, 1)
+                vu344.Transparency = 1
+                vu344.CanCollide = false
+                local v345, v346, v347 = pairs(vu344.rockGui:GetChildren())
+                while true do
+                    local v348
+                    v347, v348 = v345(v346, v347)
+                    if v347 == nil then
+                        break
+                    end
+                    v348.Visible = false
+                end
+                local v349, v350, v351 = ipairs({
+                    "rockEmitter",
+                    "hoopParticle",
+                    "lavaParticle"
+                })
+                while true do
+                    local v352
+                    v351, v352 = v349(v350, v351)
+                    if v351 == nil then
+                        break
+                    end
+                    if vu344:FindFirstChild(v352) then
+                        vu344[v352]:Destroy()
+                    end
+                end
+                vu344.CFrame = v343.CFrame
+            else
+                warn("Frozen Rock not found.")
+            end
+            wait()
+        end
+    else
+        _G.frozenautorock = false
+        pcall(function()
+            if vu344 then
+                local v353, v354, v355 = pairs(vu344.rockGui:GetChildren())
+                while true do
+                    local v356
+                    v355, v356 = v353(v354, v355)
+                    if v355 == nil then
+                        break
+                    end
+                    v356.Visible = true
+                end
+                vu344.CanCollide = true
+                vu344.Transparency = 0
+                vu344.Size = Vector3.new(80.6851577758789, 70.2999496459961, 85.07884979248047)
+                vu344.CFrame = CFrame.new(vu344.originalPosition.Value)
+            else
+                warn("Frozen Rock not found in Muscle King Mountain.")
+            end
+        end)
+    end
+end):Set(false)
+v267:AddSwitch("Tiny Rock", function(p357)
+    if p357 then
+        local v358 = game.Players.LocalPlayer
+        local v359 = (v358.Character or v358.CharacterAdded:Wait()):WaitForChild("LeftHand")
+        local v360 = game.Workspace.machinesFolder:FindFirstChild("Tiny Rock"):FindFirstChild("Rock")
+        _G.tinyautorock = true
+        while _G.tinyautorock do
+            if v360 then
+                v360.Size = Vector3.new(2, 1, 1)
+                v360.Transparency = 1
+                v360.CanCollide = false
+                local v361, v362, v363 = pairs(v360.rockGui:GetChildren())
+                while true do
+                    local v364
+                    v363, v364 = v361(v362, v363)
+                    if v363 == nil then
+                        break
+                    end
+                    v364.Visible = false
+                end
+                local v365, v366, v367 = ipairs({
+                    "rockEmitter",
+                    "hoopParticle",
+                    "lavaParticle"
+                })
+                while true do
+                    local v368
+                    v367, v368 = v365(v366, v367)
+                    if v367 == nil then
+                        break
+                    end
+                    if v360:FindFirstChild(v368) then
+                        v360[v368]:Destroy()
+                    end
+                end
+                v360.CFrame = v359.CFrame
+            else
+                warn("Tiny Rock not found.")
+            end
+            wait()
+        end
+    else
+        _G.tinyautorock = false
+        pcall(function()
+            local v369 = game.Workspace.machinesFolder:FindFirstChild("Tiny Rock"):FindFirstChild("Rock")
+            if v369 then
+                local v370, v371, v372 = pairs(v369.rockGui:GetChildren())
+                while true do
+                    local v373
+                    v372, v373 = v370(v371, v372)
+                    if v372 == nil then
+                        break
+                    end
+                    v373.Visible = true
+                end
+                v369.CanCollide = true
+                v369.Transparency = 0
+                v369.Size = Vector3.new(23.18409538269043, 20.20000648498535, 24.44658088684082)
+                v369.CFrame = CFrame.new(v369.originalPosition.Value)
+            else
+                warn("Tiny Rock not found in Muscle King Mountain.")
+            end
+        end)
+    end
+end):Set(false)
+local v374 = v1:AddTab("Farm Rebirths")
+v374:Show()
+v374:AddLabel("------ Fast Rebirthing -------")
+v374:AddSwitch("Fast Rebirth", function()
+    local vu375 = game:GetService("ReplicatedStorage")
+    local vu376 = game:GetService("Players").LocalPlayer
+    local function vu386(_)
+        local v377 = vu376.petsFolder
+        local v378, v379, v380 = pairs(v377:GetChildren())
+        while true do
+            local v381
+            v380, v381 = v378(v379, v380)
+            if v380 == nil then
+                break
+            end
+            if v381:IsA("Folder") then
+                local v382, v383, v384 = pairs(v381:GetChildren())
+                while true do
+                    local v385
+                    v384, v385 = v382(v383, v384)
+                    if v384 == nil then
+                        break
+                    end
+                    vu375.rEvents.equipPetEvent:FireServer("unequipPet", v385)
+                end
+            end
+        end
+        task.wait(0.1)
+    end
+    local function vu392(p387)
+        vu386()
+        task.wait(0.01)
+        local v388, v389, v390 = pairs(vu376.petsFolder.Unique:GetChildren())
+        while true do
+            local v391
+            v390, v391 = v388(v389, v390)
+            if v390 == nil then
+                break
+            end
+            if v391.Name == p387 then
+                vu375.rEvents.equipPetEvent:FireServer("equipPet", v391)
+            end
+        end
+    end
+    local function vu399(p393)
+        local v394 = workspace.machinesFolder:FindFirstChild(p393)
+        if not v394 then
+            local v395, v396, v397 = pairs(workspace:GetChildren())
+            while true do
+                local v398
+                v397, v398 = v395(v396, v397)
+                if v397 == nil then
+                    break
+                end
+                if v398:IsA("Folder") and v398.Name:find("machines") then
+                    v394 = v398:FindFirstChild(p393)
+                    if v394 then
+                        break
+                    end
+                end
+            end
+        end
+        return v394
+    end
+    local function vu401()
+        local v400 = game:GetService("VirtualInputManager")
+        v400:SendKeyEvent(true, "E", false, game)
+        task.wait(0.1)
+        v400:SendKeyEvent(false, "E", false, game)
+    end
+    task.spawn(function()
+        while true do
+            local v402 = 10000 + 5000 * vu376.leaderstats.Rebirths.Value
+            if vu376.ultimatesFolder:FindFirstChild("Golden Rebirth") then
+                local v403 = vu376.ultimatesFolder["Golden Rebirth"].Value
+                v402 = math.floor(v402 * (1 - v403 * 0.1))
+            end
+            vu386()
+            task.wait(0.1)
+            vu392("Swift Samurai")
+            while vu376.leaderstats.Strength.Value < v402 do
+                for _ = 1, 10 do
+                    vu376.muscleEvent:FireServer("rep")
+                end
+                task.wait()
+            end
+            vu386()
+            task.wait(0.1)
+            vu392("Tribal Overlord")
+            local v404 = vu399("Jungle Bar Lift")
+            if v404 and v404:FindFirstChild("interactSeat") then
+                vu376.Character.HumanoidRootPart.CFrame = v404.interactSeat.CFrame * CFrame.new(0, 3, 0)
+                repeat
+                    task.wait(0.1)
+                    vu401()
+                until vu376.Character.Humanoid.Sit
+            end
+            local v405 = vu376.leaderstats.Rebirths.Value
+            repeat
+                vu375.rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+                task.wait(0.1)
+            until v405 < vu376.leaderstats.Rebirths.Value
+            task.wait()
+        end
+    end)
+end)
+v374:AddLabel("------ Normal Rebirthing -------")
+local v406 = game:GetService("Players")
+local v407 = game:GetService("ReplicatedStorage")
+local vu408 = v406.LocalPlayer
+local vu409 = vu408.muscleEvent
+local vu410 = v407.rEvents.changeSpeedSizeRemote
+local _ = v407.rEvents.rebirthRemote
+v374:AddSwitch("Auto strength", function(p411)
+    isAutoStrength = p411
+    local function v417()
+        local v412 = game.Players.LocalPlayer
+        while isAutoStrength do
+            local v413 = v412:FindFirstChild("Backpack")
+            local v414 = v412.Character or v412.CharacterAdded:Wait()
+            local v415 = v414:FindFirstChild("Humanoid")
+            if v413 and v415 then
+                local v416 = v413:FindFirstChild("Weight")
+                if v416 and not v414:FindFirstChild("Weight") then
+                    v415:EquipTool(v416)
+                end
+            end
+            vu409:FireServer("rep")
+            task.wait(0.1)
+        end
+    end
+    if p411 then
+        task.spawn(v417)
+    end
+end):Set(false)
+v374:AddSwitch("Auto size 2", function(p418)
+    sizeSpam = p418
+    local function v419()
+        while sizeSpam do
+            vu410:InvokeServer("changeSize", 2)
+            task.wait(0.1)
+        end
+    end
+    if p418 then
+        task.spawn(v419)
+    end
+end):Set(false)
+v374:AddSwitch("Lock client position", function(p420)
+    lockPosition = p420
+    local v421 = vu408.Character or vu408.CharacterAdded:Wait()
+    local v422 = v421:FindFirstChild("Humanoid")
+    local vu423 = v421:FindFirstChild("HumanoidRootPart")
+    if p420 and (v422 and vu423) then
+        savedPosition = vu423.Position
+        v422.WalkSpeed = 0
+        task.spawn(function()
+            while lockPosition do
+                if (vu423.Position - savedPosition).Magnitude > 0.1 then
+                    vu423.CFrame = CFrame.new(savedPosition)
+                end
+                task.wait(0.05)
+            end
+        end)
+    elseif v422 then
+        v422.WalkSpeed = 16
+    end
+end):Set(false)
+local v424 = game:GetService("Players")
+local v425 = game:GetService("ReplicatedStorage")
+local vu426 = v424.LocalPlayer
+local vu427 = v425.rEvents.rebirthRemote
+local vu428 = {
+    StopPoint = 0,
+    Active = false
+}
+v374:AddSwitch("Auto Rebirth", function(p429)
+    vu428.Active = p429
+    local function v430()
+        while vu428.Active do
+            if vu428.StopPoint > 0 and vu426.leaderstats.Rebirths.Value >= vu428.StopPoint then
+                vu428.Active = false
+                break
+            end
+            vu427:InvokeServer("rebirthRequest")
+            task.wait(0.1)
+        end
+    end
+    if p429 then
+        task.spawn(v430)
+    end
+end)
+v374:AddTextBox("Rebirth Stop Point", function(p431)
+    local v432 = tonumber(p431)
+    if v432 then
+        vu428.StopPoint = v432
+    end
+end)
+local v433 = v1:AddTab("Farm Kills")
+v433:Show()
+v433:AddLabel("------ Auto Kill Everyone -------")
+local vu434 = {}
+local vu435 = false
+_G.autoKillActive = false
+local vu436 = "Teleport"
+local function vu441(p437)
+    local v438 = game.Players.LocalPlayer
+    local v439 = v438:FindFirstChild("Backpack")
+    local v440 = v439 and v439:FindFirstChild(p437)
+    if v440 then
+        v438.Character.Humanoid:EquipTool(v440)
+    end
+end
+local function vu473(p442)
+    _G.autoKillActive = p442
+    if p442 then
+        vu441("Punch")
+        local function v457()
+            while _G.autoKillActive do
+                task.wait()
+                local v443 = game.Players.LocalPlayer
+                v443.muscleEvent:FireServer("punch", "rightHand")
+                v443.muscleEvent:FireServer("punch", "leftHand")
+                local v444, v445, v446 = pairs(game.Players:GetPlayers())
+                while true do
+                    local v447
+                    v446, v447 = v444(v445, v446)
+                    if v446 == nil then
+                        break
+                    end
+                    if v447.Name ~= v443.Name and not table.find(vu434, v447.Name) then
+                        local v448 = game.Workspace:FindFirstChild(v447.Name)
+                        local v449 = game.Workspace:FindFirstChild(v443.Name)
+                        if v448 and v449 then
+                            local v450 = v449:FindFirstChild("LeftHand")
+                            if v450 then
+                                local v451 = v448:FindFirstChild("Head")
+                                if v451 then
+                                    v451.CFrame = v450.CFrame
+                                end
+                                local v452, v453, v454 = pairs(v448:GetDescendants())
+                                while true do
+                                    local v455
+                                    v454, v455 = v452(v453, v454)
+                                    if v454 == nil then
+                                        break
+                                    end
+                                    if v455:IsA("BasePart") and v455.Name == "Handle" then
+                                        v455.CFrame = v450.CFrame
+                                    end
+                                end
+                                local v456 = v448:FindFirstChild("sweatPart")
+                                if v456 then
+                                    v456.CFrame = v450.CFrame
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+        local function v472()
+            while _G.autoKillActive do
+                task.wait()
+                local v458 = game.Players.LocalPlayer
+                v458.muscleEvent:FireServer("punch", "rightHand")
+                v458.muscleEvent:FireServer("punch", "leftHand")
+                local v459, v460, v461 = pairs(game.Players:GetPlayers())
+                while true do
+                    local v462
+                    v461, v462 = v459(v460, v461)
+                    if v461 == nil then
+                        break
+                    end
+                    if v462.Name ~= v458.Name and not table.find(vu434, v462.Name) then
+                        local v463 = game.Workspace:FindFirstChild(v462.Name)
+                        local v464 = game.Workspace:FindFirstChild(v458.Name)
+                        if v463 and v464 then
+                            local v465 = v464:FindFirstChild("LeftHand")
+                            if v465 then
+                                local v466 = v463:FindFirstChild("Head")
+                                if v466 then
+                                    v466.Parent = nil
+                                    task.wait(0.1)
+                                    v466.CFrame = v465.CFrame
+                                    v466.Parent = v463
+                                end
+                                local v467, v468, v469 = pairs(v463:GetDescendants())
+                                while true do
+                                    local v470
+                                    v469, v470 = v467(v468, v469)
+                                    if v469 == nil then
+                                        break
+                                    end
+                                    if v470:IsA("BasePart") and v470.Name == "Handle" then
+                                        v470.CFrame = v465.CFrame
+                                    end
+                                end
+                                local v471 = v463:FindFirstChild("sweatPart")
+                                if v471 then
+                                    v471.CFrame = v465.CFrame
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+        coroutine.wrap(v457)()
+        coroutine.wrap(v472)()
+    end
+end
+local function vu491()
+    vu435 = true
+    vu441("Punch")
+    while vu435 do
+        local v474 = game.Players.LocalPlayer
+        local vu475 = v474.Character or v474.CharacterAdded:Wait()
+        local v476 = vu475:WaitForChild("HumanoidRootPart")
+        local v477, v478, v479 = ipairs(game.Players:GetPlayers())
+        while true do
+            local vu480
+            v479, vu480 = v477(v478, v479)
+            if v479 == nil then
+                break
+            end
+            if vu480 ~= v474 and not table.find(vu434, vu480.Name) then
+                pcall(function()
+                    local v481 = vu480.Character
+                    local v482
+                    if v481 then
+                        v482 = v481:FindFirstChild("HumanoidRootPart")
+                    else
+                        v482 = v481
+                    end
+                    if v482 then
+                        v482.Size = Vector3.new(20, 20, 20)
+                        v482.Transparency = 1
+                        v482.Color = Color3.new(1, 0, 0)
+                        v482.Material = Enum.Material.Neon
+                        v482.CanCollide = false
+                        v482.CFrame = CFrame.new(1955.3785, 1.7816, 6170.521)
+                        local v483, v484, v485 = pairs(v481:GetDescendants())
+                        while true do
+                            local v486
+                            v485, v486 = v483(v484, v485)
+                            if v485 == nil then
+                                break
+                            end
+                            if v486:IsA("BasePart") then
+                                v486.Transparency = 1
+                            elseif v486:IsA("Decal") then
+                                v486.Transparency = 1
+                            elseif v486:IsA("Texture") then
+                                v486.Transparency = 1
+                            elseif v486:IsA("MeshPart") then
+                                v486.Transparency = 1
+                            elseif v486:IsA("SpecialMesh") then
+                                v486.Transparency = 1
+                            elseif v486:IsA("BillboardGui") then
+                                v486.Enabled = false
+                            elseif v486:IsA("Tool") then
+                                v486:Destroy()
+                            elseif v486:IsA("BasePart") and v486.Name == "Handle" then
+                                v486:Destroy()
+                            end
+                        end
+                        local v487 = v481:FindFirstChild("Head")
+                        if v487 then
+                            local v488 = v487:FindFirstChildOfClass("Decal")
+                            if v488 then
+                                v488.Transparency = 1
+                            end
+                            local v489 = v487:FindFirstChildOfClass("BillboardGui")
+                            if v489 then
+                                v489.Enabled = false
+                            end
+                        end
+                        local v490 = vu475:FindFirstChild("Punch")
+                        if v490 then
+                            v490:Activate()
+                        end
+                    end
+                end)
+            end
+        end
+        v476.CFrame = CFrame.new(1953.2662, 1.7816, 6186.1226)
+        task.wait(0.01)
+    end
+end
+v433:AddSwitch("Enable Auto Kill", function(p492)
+    if p492 then
+        if vu436 ~= "Teleport" then
+            vu473(true)
+        else
+            spawn(vu491)
+        end
+    else
+        vu435 = false
+        _G.autoKillActive = false
+    end
+end):Set(false)
+local v494 = v433:AddDropdown("Select Kill Method", function(p493)
+    vu436 = p493
+end)
+v494:Add("Teleport")
+v494:Add("No Teleport")
+local vu500 = v433:AddDropdown("Whitelist Players", function(p495)
+    if table.find(vu434, p495) then
+        local v496, v497, v498 = ipairs(vu434)
+        while true do
+            local v499
+            v498, v499 = v496(v497, v498)
+            if v498 == nil then
+                break
+            end
+            if v499 == p495 then
+                table.remove(vu434, v498)
+                break
+            end
+        end
+    else
+        table.insert(vu434, p495)
+    end
+end)
+local v501, v502, v503 = ipairs(game.Players:GetPlayers())
+while true do
+    local v504
+    v503, v504 = v501(v502, v503)
+    if v503 == nil then
+        break
+    end
+    if v504.Name ~= game.Players.LocalPlayer.Name then
+        vu500:Add(v504.Name)
+    end
+end
+game.Players.PlayerAdded:Connect(function(p505)
+    if p505.Name ~= game.Players.LocalPlayer.Name then
+        vu500:Add(p505.Name)
+    end
+end)
+game.Players.PlayerRemoving:Connect(function(p506)
+    if p506.Name ~= game.Players.LocalPlayer.Name then
+        vu500:Remove(p506.Name)
+    end
+end)
+v433:AddSwitch("Enable Faster Auto Kill", function(p507)
+    _G.fasterAutoKill = p507
+    local v508 = game.Players.LocalPlayer
+    local v509 = v508.Backpack:FindFirstChild("Punch")
+    local v510 = v508.Character
+    if v510 then
+        v510 = v510:FindFirstChild("Punch")
+    end
+    local v511 = p507 and 0 or 0.35
+    if v509 and v509:FindFirstChild("attackTime") then
+        v509.attackTime.Value = v511
+    elseif v510 and v510:FindFirstChild("attackTime") then
+        v510.attackTime.Value = v511
+    end
+end):Set(false)
+v433:AddLabel("------ Auto Kill One Player -------")
+v433:AddTextBox("Player Username", function(p512)
+    targetPlayerName = p512
+end)
+local vu513 = false
+v433:AddSwitch("Auto Kill Player", function(p514)
+    vu513 = p514
+    local vu515 = game.Players.LocalPlayer
+    local v516 = vu515:FindFirstChild("Backpack")
+    if v516 then
+        v516 = v516:FindFirstChild("Punch")
+    end
+    if v516 then
+        vu515.Character.Humanoid:EquipTool(v516)
+    end
+    spawn(function()
+        while vu513 do
+            if targetPlayerName then
+                local v517 = game.Players:FindFirstChild(targetPlayerName)
+                if v517 and v517 ~= vu515 then
+                    local v518 = v517.Character
+                    if v518 then
+                        v518 = v518:FindFirstChild("HumanoidRootPart")
+                    end
+                    if v518 then
+                        local v519 = vu515.Character
+                        if v519 then
+                            v519 = vu515.Character:FindFirstChild("RightHand")
+                        end
+                        local v520 = vu515.Character
+                        if v520 then
+                            v520 = vu515.Character:FindFirstChild("LeftHand")
+                        end
+                        if v519 and v520 then
+                            vu515.muscleEvent:FireServer("punch", "rightHand")
+                            vu515.muscleEvent:FireServer("punch", "leftHand")
+                            firetouchinterest(v519, v518, 1)
+                            firetouchinterest(v520, v518, 1)
+                            firetouchinterest(v519, v518, 0)
+                            firetouchinterest(v520, v518, 0)
+                        end
+                    end
+                end
+                task.wait(0.1)
+            else
+                task.wait(0.1)
+            end
+        end
+    end)
+end)
+v433:AddSwitch("View Player", function(p521)
+    local v522 = game.Players.LocalPlayer
+    local v523 = game.Players:FindFirstChild(targetPlayerName)
+    if p521 and (v523 and (v523.Character and v522.Character)) then
+        workspace.CurrentCamera.CameraSubject = v523.Character:FindFirstChildOfClass("Humanoid") or v523.Character:FindFirstChild("HumanoidRootPart")
+    elseif not p521 then
+        workspace.CurrentCamera.CameraSubject = v522.Character:FindFirstChildOfClass("Humanoid") or v522.Character:FindFirstChild("HumanoidRootPart")
+    end
+end)
